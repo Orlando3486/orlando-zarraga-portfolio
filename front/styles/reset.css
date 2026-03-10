@@ -1,0 +1,72 @@
+/* Reset CSS moderno */
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Elimina márgenes por defecto */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Mejora renderizado de texto */
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Altura base */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Imágenes y medios responsivos */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Inputs heredan fuente */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Quita estilos de listas */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Links sin estilos por defecto */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Mejora títulos */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+}
+
+/* Tablas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
