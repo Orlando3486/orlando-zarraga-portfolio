@@ -13,11 +13,8 @@ export default function InteractiveNetwork() {
     let height = 0;
 
     function resizeCanvas() {
-      const rect = canvas.getBoundingClientRect();
-      canvas.width = rect.width;
-      canvas.height = rect.height;
-      width = rect.width;
-      height = rect.height;
+      width = canvas.width = window.innerWidth;
+      height = canvas.height = window.innerHeight;
     }
 
     resizeCanvas();
