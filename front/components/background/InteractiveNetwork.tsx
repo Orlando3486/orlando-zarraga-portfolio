@@ -8,8 +8,10 @@ export default function InteractiveNetwork() {
   useEffect(() => {
     const canvas = canvasRef.current!;
     const ctx = canvas.getContext("2d")!;
-    let width = canvas.width;
-    let height = canvas.height;
+
+    let width = 0;
+    let height = 0;
+
     function resizeCanvas() {
       const rect = canvas.getBoundingClientRect();
       canvas.width = rect.width;
@@ -22,7 +24,9 @@ export default function InteractiveNetwork() {
 
     const mouse = { x: width / 2, y: height / 2 };
 
-    const particles = Array.from({ length: 120 }).map(() => ({
+    const particleCount = window.innerWidth < 768 ? 60 : 120;
+
+    const particles = Array.from({ length: particleCount }).map(() => ({
       x: Math.random() * width,
       y: Math.random() * height,
       vx: (Math.random() - 0.5) * 0.6,
@@ -62,7 +66,7 @@ export default function InteractiveNetwork() {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(55, 102, 169, 0.12),${1 - dist / 120})`;
+            ctx.strokeStyle = `rgba(55, 102, 169, ${1 - dist / 120})`;
             ctx.stroke();
           }
         }
