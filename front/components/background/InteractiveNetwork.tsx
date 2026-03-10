@@ -24,7 +24,7 @@ export default function InteractiveNetwork() {
 
     const mouse = { x: width / 2, y: height / 2 };
 
-    const particleCount = window.innerWidth < 768 ? 60 : 120;
+    const particleCount = window.innerWidth < 768 ? 50 : 100;
 
     const particles = Array.from({ length: particleCount }).map(() => ({
       x: Math.random() * width,
@@ -51,7 +51,7 @@ export default function InteractiveNetwork() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = "#d6d8dbad";
+        ctx.fillStyle = "#c3cbd7ad";
         ctx.fill();
       });
 
