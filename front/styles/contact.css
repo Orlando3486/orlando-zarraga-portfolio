@@ -1,0 +1,50 @@
+.section-contact {
+  min-height: 90vh;
+  justify-content: center;
+  text-align: center;
+}
+
+.section-contact h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+.section-contact h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.section-contact p {
+  padding-top: 20px;
+  font-size: clamp(18px, 2vw, 18px);
+  color: #cbd5f5;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.contacts-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0px;
+  text-decoration: none;
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 0.5rem;
+}
+
+.contact-links a {
+  color: #38bdf8;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-links a:hover {
+  transform: scale(1.2);
+}

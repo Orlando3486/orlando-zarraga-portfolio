@@ -1,0 +1,21 @@
+.section-about {
+  min-height: 80vh;
+  justify-content: center;
+  padding: 20px;
+  padding: 120px 40px;
+  text-align: center;
+}
+
+.section-about h2 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  color: #38bdf8;
+}
+
+.section-about p {
+  font-size: clamp(20px, 2vw, 18px);
+  color: #cbd5f5;
+  line-height: 1.6;
+  margin-bottom: 40px;
+  text-align: left;
+}

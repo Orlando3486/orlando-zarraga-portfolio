@@ -24,7 +24,7 @@ export default function Hero() {
           </h2>
 
           <p className="hero-description">
-            Construyo aplicaciones web modernas, escalables y bien estructuradas
+            Construyo aplicaciones modernas, escalables y bien estructuradas
             utilizando tecnologías modernas del ecosistema JavaScript.
           </p>
 
