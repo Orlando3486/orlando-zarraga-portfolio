@@ -6,6 +6,7 @@ body {
   overflow-x: hidden;
   min-height: 100dvh;
   scroll-behavior: smooth;
+  padding-top: 15px;
 }
 
 .interactive-bg {
