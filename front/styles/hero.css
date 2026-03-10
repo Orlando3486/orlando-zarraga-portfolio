@@ -9,26 +9,27 @@
 .hero-intro {
   font-size: 24px;
   color: #94a3b8;
-  margin-bottom: 10px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .hero-title {
   font-size: clamp(36px, 6vw, 64px);
   font-weight: 700;
-  margin-bottom: 10px;
+  padding: 0px;
+  margin: 0px;
 }
 
 .hero-role {
   font-size: clamp(20px, 3vw, 28px);
   color: #38bdf8;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .hero-description {
   font-size: clamp(18px, 2vw, 18px);
   color: #cbd5f5;
   line-height: 1.6;
-  margin-bottom: 40px;
 }
 
 .hero-buttons {

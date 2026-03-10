@@ -21,7 +21,7 @@
   font-size: clamp(12px, 2vw, 10px);
   color: #cbd5f5;
   line-height: 1.6;
-  /* margin-bottom: 10px; */
+  margin-bottom: 20px;
   text-align: center;
 }
 
