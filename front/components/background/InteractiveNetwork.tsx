@@ -21,7 +21,7 @@ export default function InteractiveNetwork() {
 
     const mouse = { x: width / 2, y: height / 2 };
 
-    const particleCount = window.innerWidth < 768 ? 50 : 100;
+    const particleCount = window.innerWidth < 768 ? 40 : 80;
 
     const particles = Array.from({ length: particleCount }).map(() => ({
       x: Math.random() * width,
