@@ -39,6 +39,9 @@ export default function Contact() {
         Orlando Zarraga | Desarrollador Full Stack, © 2026. <br /> Todos los
         derechos reservados.
       </p>
+      <a href="#hero" className="scroll-top">
+        ↑
+      </a>
     </section>
   );
 }

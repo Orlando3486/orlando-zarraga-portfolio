@@ -1,5 +1,5 @@
 .section-contact {
-  /* padding-top: 0px; */
+  padding-top: 10px;
   min-height: 90vh;
   justify-content: center;
   align-items: center;
@@ -60,4 +60,15 @@
   pointer-events: none;
   opacity: 1;
   transform: none;
+}
+
+.scroll-top {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #38bdf8;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: 18px;
 }
