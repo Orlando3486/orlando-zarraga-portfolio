@@ -27,7 +27,7 @@ export default function InteractiveNetwork() {
     });
 
     function draw() {
-      ctx.fillStyle = "#020617";
+      ctx.fillStyle = "#020617bc";
       ctx.fillRect(0, 0, width, height);
 
       particles.forEach((p) => {
@@ -39,7 +39,7 @@ export default function InteractiveNetwork() {
 
         ctx.beginPath();
         ctx.arc(p.x, p.y, 2, 0, Math.PI * 2);
-        ctx.fillStyle = "#d6d8db";
+        ctx.fillStyle = "#d6d8dbad";
         ctx.fill();
       });
 
@@ -54,7 +54,7 @@ export default function InteractiveNetwork() {
             ctx.beginPath();
             ctx.moveTo(particles[i].x, particles[i].y);
             ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(144, 158, 177, 0.3),${1 - dist / 120})`;
+            ctx.strokeStyle = `rgba(55, 102, 169, 0.12),${1 - dist / 120})`;
             ctx.stroke();
           }
         }
@@ -70,7 +70,7 @@ export default function InteractiveNetwork() {
           ctx.beginPath();
           ctx.moveTo(p.x, p.y);
           ctx.lineTo(mouse.x, mouse.y);
-          ctx.strokeStyle = "#38bdf8";
+          ctx.strokeStyle = "#38bff8a5";
           ctx.stroke();
         }
       });

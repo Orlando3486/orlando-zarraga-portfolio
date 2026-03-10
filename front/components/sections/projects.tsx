@@ -12,11 +12,11 @@ export default function Projects() {
         "Aplicación web para gestión de citas médicas con autenticación, panel administrativo y base de datos.",
       image: "/images/centro-estetico.png",
       technologies: [
-        <FaReact key="react" color="#61DBFB" size={26} />,
-        <SiNextdotjs key="nextjs" color="#ffffff" size={26} />,
-        <FaNodeJs key="nodejs" color="#3C873A" size={26} />,
-        <SiPostgresql key="postgresql" color="#336791" size={26} />,
-        <SiTypescript key="typescript" color="#3178C6" size={26} />,
+        <FaReact key="react" color="#61DBFB" size={28} />,
+        <SiNextdotjs key="nextjs" color="#ffffff" size={28} />,
+        <FaNodeJs key="nodejs" color="#3C873A" size={28} />,
+        <SiPostgresql key="postgresql" color="#336791" size={28} />,
+        <SiTypescript key="typescript" color="#3178C6" size={28} />,
       ],
       github:
         "https://github.com/Orlando3486/Centro-Estetico-Dr.-Jose-Leonardo-Ferrer",
@@ -28,11 +28,11 @@ export default function Projects() {
         "Plataforma social y colaborativa para compartir recetas, aprender cocina y crear comunidad.",
       image: "/images/si-chef.png",
       technologies: [
-        <FaReact key="react" color="#61DBFB" size={26} />,
-        <SiNextdotjs key="nextjs" color="#ffffff" size={26} />,
-        <FaNodeJs key="nodejs" color="#3C873A" size={26} />,
-        <SiPostgresql key="postgresql" color="#336791" size={26} />,
-        <SiTypescript key="typescript" color="#3178C6" size={26} />,
+        <FaReact key="react" color="#61DBFB" size={28} />,
+        <SiNextdotjs key="nextjs" color="#ffffff" size={28} />,
+        <FaNodeJs key="nodejs" color="#3C873A" size={28} />,
+        <SiPostgresql key="postgresql" color="#336791" size={28} />,
+        <SiTypescript key="typescript" color="#3178C6" size={28} />,
         <FaDocker key="docker" />,
       ],
       github: "https://github.com/Orlando3486/Sichef",
@@ -43,7 +43,7 @@ export default function Projects() {
   return (
     <section id="projects" className="projects">
       <h2 className="projects-title">Proyectos</h2>
-      <p className="projects-subtitle">Algunos trabajos recientes</p>
+      {/* <p className="projects-subtitle">Algunos trabajos recientes</p> */}
 
       <div className="projects-grid">
         {projects.map((project, index) => (
@@ -57,8 +57,8 @@ export default function Projects() {
               <Image
                 src={project.image}
                 alt={project.title}
-                width={420}
-                height={240}
+                width={400}
+                height={220}
                 className="project-image"
               />
             </div>
@@ -77,10 +77,10 @@ export default function Projects() {
 
             <div className="project-links">
               <a href={project.github} target="_blank">
-                <FaGithub size={28} color="#ffffff" />
+                <FaGithub size={30} color="#ffffff" />
               </a>
               <a href={project.demo} target="_blank">
-                <FiExternalLink size={28} />
+                <FiExternalLink size={30} />
               </a>
             </div>
           </div>
