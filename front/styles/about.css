@@ -1,12 +1,20 @@
-.section-about {
+/* .section-about {
   min-height: 80vh;
   justify-content: center;
   padding: 20px;
   padding: 120px 40px;
   text-align: center;
+} */
+
+.section-about {
+  min-height: 50vh;
+  max-width: 1200px;
+  margin: auto;
+  padding: 4rem 1rem;
 }
 
 .section-about h2 {
+  text-align: center;
   font-size: 40px;
   margin-bottom: 10px;
   color: #38bdf8;
@@ -17,5 +25,5 @@
   color: #cbd5f5;
   line-height: 1.6;
   margin-bottom: 40px;
-  text-align: left;
+  text-align: justify;
 }
