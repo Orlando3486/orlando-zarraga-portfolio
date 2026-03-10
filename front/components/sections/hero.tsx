@@ -8,7 +8,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Hero() {
   return (
-    <section className="hero">
+    <section id="hero" className="hero">
       <div className="hero-wrapper">
         <div className="hero-text">
           <p className="hero-intro">Hola, soy</p>
