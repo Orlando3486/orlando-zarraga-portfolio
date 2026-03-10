@@ -8,9 +8,17 @@ export default function InteractiveNetwork() {
   useEffect(() => {
     const canvas = canvasRef.current!;
     const ctx = canvas.getContext("2d")!;
+    let width = canvas.width;
+    let height = canvas.height;
+    function resizeCanvas() {
+      const rect = canvas.getBoundingClientRect();
+      canvas.width = rect.width;
+      canvas.height = rect.height;
+      width = rect.width;
+      height = rect.height;
+    }
 
-    let width = (canvas.width = window.innerWidth);
-    let height = (canvas.height = window.innerHeight);
+    resizeCanvas();
 
     const mouse = { x: width / 2, y: height / 2 };
 
@@ -80,10 +88,7 @@ export default function InteractiveNetwork() {
 
     draw();
 
-    window.addEventListener("resize", () => {
-      width = canvas.width = window.innerWidth;
-      height = canvas.height = window.innerHeight;
-    });
+    window.addEventListener("resize", resizeCanvas);
   }, []);
 
   return <canvas ref={canvasRef} className="interactive-bg" />;
