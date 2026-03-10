@@ -54,7 +54,7 @@ export default function Hero() {
           <Image
             src="/images/profile-image.png"
             alt="Foto Orlando Zárraga"
-            width={300}
+            width={290}
             height={320}
             className="profile-img"
           />
