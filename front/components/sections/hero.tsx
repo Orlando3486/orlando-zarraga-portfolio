@@ -39,7 +39,7 @@ export default function Hero() {
           </div>
 
           <div className="hero-socials">
-            <a href="https://github.com/Orlando3486">
+            <a href="https://github.com/Orlando3486" target="_blank">
               <FaGithub size={32} color="#ffffff" />
             </a>
             <a
