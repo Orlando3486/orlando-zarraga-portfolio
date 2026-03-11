@@ -9,9 +9,7 @@ import {
   FaBootstrap,
   FaFigma,
   FaLinux,
-  FaVial,
   FaRobot,
-  FaShieldAlt,
 } from "react-icons/fa";
 import "./../../styles/tecnologies.css";
 import {
@@ -33,7 +31,7 @@ import {
 } from "react-icons/si";
 import { TbApi, TbTopologyStar3 } from "react-icons/tb";
 import { GiCycle } from "react-icons/gi";
-import { MdArchitecture, MdSpeed } from "react-icons/md";
+import { MdArchitecture } from "react-icons/md";
 import { HiCode } from "react-icons/hi";
 import { VscVscode } from "react-icons/vsc";
 
@@ -114,7 +112,7 @@ export default function Tecnologies() {
     { name: "CI/CD", icon: GiCycle, color: "#38bdf8", category: "DevOps" },
     { name: "Linux", icon: FaLinux, color: "#FCC624", category: "DevOps" },
 
-    { name: "Figma", icon: FaFigma, color: "#F24E1E", category: "Design" },
+    { name: "Figma", icon: FaFigma, color: "#F24E1E", category: "Tools" },
     {
       name: "Cloudinary",
       icon: SiCloudinary,
@@ -135,37 +133,37 @@ export default function Tecnologies() {
       category: "Architecture",
     },
 
-    {
-      name: "Web Performance",
-      icon: MdSpeed,
-      color: "#facc15",
-      category: "Engineering",
-    },
-    {
-      name: "Testing",
-      icon: FaVial,
-      color: "#22c55e",
-      category: "Engineering",
-    },
+    // {
+    //   name: "Web Performance",
+    //   icon: MdSpeed,
+    //   color: "#facc15",
+    //   category: "Engineering",
+    // },
+    // {
+    //   name: "Testing",
+    //   icon: FaVial,
+    //   color: "#22c55e",
+    //   category: "Engineering",
+    // },
     {
       name: "AI Assisted Development",
       icon: FaRobot,
       color: "#38bdf8",
-      category: "AI",
+      category: "Tools",
     },
-    { name: "AI Tools", icon: SiOpenai, color: "#10A37F", category: "AI" },
+    { name: "AI Tools", icon: SiOpenai, color: "#10A37F", category: "Tools" },
     {
       name: "Microservices",
       icon: TbTopologyStar3,
       color: "#38bdf8",
       category: "Architecture",
     },
-    {
-      name: "Web Security",
-      icon: FaShieldAlt,
-      color: "#ef4444",
-      category: "Security",
-    },
+    // {
+    //   name: "Web Security",
+    //   icon: FaShieldAlt,
+    //   color: "#ef4444",
+    //   category: "Security",
+    // },
     { name: "API Design", icon: TbApi, color: "#38bdf8", category: "Backend" },
   ];
 
@@ -175,11 +173,11 @@ export default function Tecnologies() {
     "Database",
     "DevOps",
     "Tools",
-    "Design",
+    // "Design",
     "Architecture",
-    "Engineering",
-    "AI",
-    "Security",
+    // "Engineering",
+    // "Security",
+    // "AI",
   ];
 
   return (
