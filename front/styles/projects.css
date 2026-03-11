@@ -1,11 +1,11 @@
 .projects {
-  /* min-height: 90vh; */
+  min-height: 80vh;
   padding: 100px 30px;
   text-align: center;
 }
 
 .projects-title {
-  font-size: 32px;
+  font-size: 30px;
   margin-bottom: 50px;
   color: #38bdf8;
 }
