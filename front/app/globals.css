@@ -4,7 +4,6 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  min-height: 100dvh;
   scroll-behavior: smooth;
 }
 
@@ -18,10 +17,13 @@ section {
 
 .interactive-bg {
   position: fixed;
-  inset: 0;
-  width: 100dvw;
-  height: 100dvh;
+  top: 0;
+  left: 0;
+  /* inset: 0; */
+  width: 100%;
+  height: 100%;
   z-index: -1;
+  pointer-events: none;
 }
 
 body {
