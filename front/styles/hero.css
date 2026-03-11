@@ -81,17 +81,20 @@
 .hero-socials {
   display: flex;
   justify-content: left;
-  flex-direction: row;
-  gap: 20px;
+  align-items: center;
+  gap: 16px;
   margin-top: 20px;
 }
 
 .hero-socials a {
+  display: flex;
+  align-items: center;
   transition: 0.3s;
 }
 
 .hero-socials a:hover {
   transform: scale(1.2);
+  /* transform: translateY(-4px); */
 }
 
 .hero-wrapper {
@@ -196,7 +199,8 @@
   }
 
   .hero-socials {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
 }
