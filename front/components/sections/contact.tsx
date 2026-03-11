@@ -1,9 +1,44 @@
+"use client";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "./../../styles/contact.css";
 import { MdEmail } from "react-icons/md";
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 
 export default function Contact() {
+  const [idle, setIdle] = useState(true);
+  const [bottomOffset, setBottomOffset] = useState(20);
+  const idleTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(() => {
+    const footer = document.querySelector("footer");
+
+    function updateBottomOffset() {
+      if (!footer) return;
+      const footerRect = footer.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      if (footerRect.top < windowHeight) {
+        const overlap = windowHeight - footerRect.top;
+        setBottomOffset(overlap + 12);
+      } else {
+        setBottomOffset(20);
+      }
+    }
+
+    function handleScroll() {
+      setIdle(false);
+      if (idleTimer.current) clearTimeout(idleTimer.current);
+      idleTimer.current = setTimeout(() => setIdle(true), 800);
+      updateBottomOffset();
+    }
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (idleTimer.current) clearTimeout(idleTimer.current);
+    };
+  }, []);
+
   return (
     <section id="contact" className="section-contact">
       <h2>Contacto</h2>
@@ -30,16 +65,15 @@ export default function Contact() {
         </li>
         <li className="contact-links">
           <a href="https://github.com/Orlando3486" target="_blank">
-            {" "}
             <FaGithub size={36} color="#ffffff" />
           </a>
         </li>
       </ul>
-      {/* <p>
-        Orlando Zarraga | Desarrollador Full Stack, © 2026. <br /> Todos los
-        derechos reservados.
-      </p> */}
-      <a href="#hero" className="scroll-top">
+      <a
+        href="#hero"
+        className={`scroll-top ${idle ? "is-idle" : ""}`}
+        style={{ bottom: `${bottomOffset}px` }}
+        aria-label="Volver al inicio">
         ↑
       </a>
     </section>
