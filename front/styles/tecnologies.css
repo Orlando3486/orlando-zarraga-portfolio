@@ -1,5 +1,5 @@
 .section-tecnologies {
-  min-height: 90vh;
+  min-height: 80vh;
   padding: 120px 40px;
   text-align: center;
 }
@@ -11,9 +11,9 @@
 }
 
 .section-tecnologies {
-  max-width: 1100px;
+  max-width: 1300px;
   margin: auto;
-  padding: 4rem 1rem;
+  padding: 3rem 1rem;
 }
 
 .tech-category {
@@ -28,8 +28,9 @@
 
 .tech-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(120px, auto));
+  gap: 20px;
+  justify-content: center;
 }
 
 .tech-item {
@@ -37,9 +38,9 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 8px 10px;
+  padding: 8px 11px;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(72, 71, 71, 0.544);
   transition: 0.3s;
 }
 
