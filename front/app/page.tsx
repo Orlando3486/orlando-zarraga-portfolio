@@ -5,7 +5,6 @@ import About from "../components/sections/about";
 import Tecnologies from "../components/sections/tecnologies";
 import Contact from "../components/sections/contact";
 import Navbar from "../components/sections/navbar";
-import Footer from "../components/sections/footer";
 
 export default function Home() {
   return (
@@ -20,8 +19,6 @@ export default function Home() {
         <Tecnologies />
         <Contact />
       </main>
-
-      <Footer />
     </>
   );
 }
