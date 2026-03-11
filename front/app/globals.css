@@ -52,21 +52,3 @@ h3,
 h4 {
   font-family: var(--font-poppins);
 }
-
-footer {
-  padding-bottom: env(safe-area-inset-bottom);
-  width: 100dvw;
-  padding: 0.6rem;
-  background: rgba(15, 23, 42, 0.6);
-  backdrop-filter: blur(12px);
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-footer p {
-  font-size: clamp(12px, 2vw, 10px);
-  font-size: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  line-height: 1.6;
-}
