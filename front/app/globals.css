@@ -63,6 +63,7 @@ footer {
 }
 
 footer p {
+  font-size: clamp(12px, 2vw, 10px);
   font-size: 12px;
   display: flex;
   align-items: center;
