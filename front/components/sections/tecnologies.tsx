@@ -10,6 +10,7 @@ import {
   FaFigma,
   FaLinux,
   FaRobot,
+  FaShieldAlt,
 } from "react-icons/fa";
 import "./../../styles/tecnologies.css";
 import {
@@ -146,7 +147,7 @@ export default function Tecnologies() {
     //   category: "Engineering",
     // },
     {
-      name: "AI Assisted Development",
+      name: "AI Assisted Dev",
       icon: FaRobot,
       color: "#38bdf8",
       category: "Tools",
@@ -158,12 +159,12 @@ export default function Tecnologies() {
       color: "#38bdf8",
       category: "Architecture",
     },
-    // {
-    //   name: "Web Security",
-    //   icon: FaShieldAlt,
-    //   color: "#ef4444",
-    //   category: "Security",
-    // },
+    {
+      name: "Web Security",
+      icon: FaShieldAlt,
+      color: "#ef4444",
+      category: "Backend",
+    },
     { name: "API Design", icon: TbApi, color: "#38bdf8", category: "Backend" },
   ];
 
