@@ -3,7 +3,7 @@
   display: flex;
   align-items: end;
   justify-content: center;
-  scroll-margin-top: 100px;
+  padding-top: 20px;
 }
 
 .hero-intro {
@@ -197,11 +197,5 @@
   .hero-socials {
     flex-direction: column;
     align-items: center;
-  }
-}
-
-@media (min-width: 768px) {
-  section {
-    scroll-margin-top: 80px;
   }
 }
