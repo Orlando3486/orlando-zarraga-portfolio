@@ -36,12 +36,12 @@ export default function Hero() {
 
           <div className="hero-socials">
             <a href="https://github.com/Orlando3486" target="_blank">
-              <FaGithub size={32} color="#ffffff" />
+              <FaGithub size={34} color="#ffffff" />
             </a>
             <a
               href="https://www.linkedin.com/in/orlando-ismael-zarraga-medina-327211171/"
               target="_blank">
-              <FaLinkedin size={32} color="#0A66C2" />
+              <FaLinkedin size={34} color="#0A66C2" />
             </a>
           </div>
         </div>

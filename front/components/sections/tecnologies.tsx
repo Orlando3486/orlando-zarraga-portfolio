@@ -11,6 +11,7 @@ import {
   FaLinux,
   FaRobot,
   FaShieldAlt,
+  FaLock,
 } from "react-icons/fa";
 import "./../../styles/tecnologies.css";
 import {
@@ -29,6 +30,14 @@ import {
   SiJsonwebtokens,
   SiPostman,
   SiOpenai,
+  SiTypeorm,
+  SiSocketdotio,
+  SiAuth0,
+  SiStripe,
+  SiSendgrid,
+  SiVercel,
+  SiRender,
+  SiGooglecloud,
 } from "react-icons/si";
 import { TbApi, TbTopologyStar3 } from "react-icons/tb";
 import { GiCycle } from "react-icons/gi";
@@ -150,9 +159,9 @@ export default function Tecnologies() {
       name: "AI Assisted Dev",
       icon: FaRobot,
       color: "#38bdf8",
-      category: "Tools",
+      category: "AI",
     },
-    { name: "AI Tools", icon: SiOpenai, color: "#10A37F", category: "Tools" },
+    { name: "AI Tools", icon: SiOpenai, color: "#10A37F", category: "AI" },
     {
       name: "Microservices",
       icon: TbTopologyStar3,
@@ -166,6 +175,41 @@ export default function Tecnologies() {
       category: "Backend",
     },
     { name: "API Design", icon: TbApi, color: "#38bdf8", category: "Backend" },
+    { name: "TypeORM", icon: SiTypeorm, color: "#E83524", category: "Backend" },
+    {
+      name: "Socket.IO",
+      icon: SiSocketdotio,
+      color: "#ffffff",
+      category: "Backend",
+    },
+    { name: "BCrypt", icon: FaLock, color: "#38bdf8", category: "Backend" },
+
+    { name: "NextAuth", icon: SiNextdotjs, color: "#ffffff", category: "auth" },
+    { name: "OAuth", icon: SiAuth0, color: "#EB5424", category: "auth" },
+
+    {
+      name: "Stripe",
+      icon: SiStripe,
+      color: "#635BFF",
+      category: "Integration",
+    },
+    {
+      name: "SendGrid",
+      icon: SiSendgrid,
+      color: "#00A4D6",
+      category: "Integration",
+    },
+
+    {
+      name: "Cloud Vision",
+      icon: SiGooglecloud,
+      color: "#4285F4",
+      category: "AI",
+    },
+    { name: "Vertex AI", icon: SiOpenai, color: "#4285F4", category: "AI" },
+
+    { name: "Vercel", icon: SiVercel, color: "#ffffff", category: "DevOps" },
+    { name: "Render", icon: SiRender, color: "#46E3B7", category: "DevOps" },
   ];
 
   const categories = [
@@ -178,7 +222,8 @@ export default function Tecnologies() {
     "Architecture",
     // "Engineering",
     // "Security",
-    // "AI",
+    "AI",
+    "Integration",
   ];
 
   return (
