@@ -4,6 +4,7 @@ import "./../../styles/contact.css";
 import { MdEmail } from "react-icons/md";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import Footer from "./footer";
 
 export default function Contact() {
   const [idle, setIdle] = useState(true);
@@ -76,6 +77,7 @@ export default function Contact() {
         aria-label="Volver al inicio">
         ↑
       </a>
+      <Footer />
     </section>
   );
 }
