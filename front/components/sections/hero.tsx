@@ -15,17 +15,13 @@ export default function Hero() {
 
           <h1 className="hero-title">Orlando Zárraga</h1>
 
-          {/* <h2 className="hero-role">
-            Full Stack Developer | Backend Engineer | React Specialist |
-          </h2> */}
-
           <h2 className="hero-role">
             <TypingText />
           </h2>
 
           <p className="hero-description">
             Construyo aplicaciones modernas, escalables y bien estructuradas
-            utilizando tecnologías modernas del ecosistema JavaScript.
+            utilizando tecnologías del ecosistema JavaScript.
           </p>
 
           <div className="hero-buttons">
