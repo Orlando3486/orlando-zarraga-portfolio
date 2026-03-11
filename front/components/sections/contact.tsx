@@ -35,10 +35,10 @@ export default function Contact() {
           </a>
         </li>
       </ul>
-      <p>
+      {/* <p>
         Orlando Zarraga | Desarrollador Full Stack, © 2026. <br /> Todos los
         derechos reservados.
-      </p>
+      </p> */}
       <a href="#hero" className="scroll-top">
         ↑
       </a>

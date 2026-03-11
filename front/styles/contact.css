@@ -1,6 +1,6 @@
 .section-contact {
   padding-top: 10px;
-  min-height: 90vh;
+  min-height: 80vh;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -22,7 +22,6 @@
   font-size: clamp(12px, 2vw, 10px);
   color: #cbd5f5;
   line-height: 1.6;
-  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -64,11 +63,16 @@
 
 .scroll-top {
   position: fixed;
-  bottom: 25px;
+  bottom: 75px;
   right: 25px;
   background: #38bdf8;
   color: white;
   padding: 10px 14px;
   border-radius: 50%;
   font-size: 18px;
+  transition: transform 0.2s ease;
+}
+
+.scroll-top:hover {
+  transform: translateY(-3px);
 }
