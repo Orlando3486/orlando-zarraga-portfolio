@@ -1,4 +1,11 @@
+/* Fix para notch/dynamic island en iPhone */
+main {
+  padding-top: calc(80px + env(safe-area-inset-top));
+}
+
 .navbar {
+  padding-top: env(safe-area-inset-top);
+  height: calc(80px + env(safe-area-inset-top));
   position: fixed;
   top: 0;
   width: 100dvw;
