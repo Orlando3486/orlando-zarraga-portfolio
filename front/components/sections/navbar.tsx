@@ -52,18 +52,18 @@ export default function Navbar() {
         </li>
         <li>
           <a
-            href="#projects"
-            onClick={() => setMenuOpen(false)}
-            className={activeSection === "projects" ? "active-link" : ""}>
-            Proyectos
-          </a>
-        </li>
-        <li>
-          <a
             href="#about"
             onClick={() => setMenuOpen(false)}
             className={activeSection === "about" ? "active-link" : ""}>
             Sobre mí
+          </a>
+        </li>
+        <li>
+          <a
+            href="#projects"
+            onClick={() => setMenuOpen(false)}
+            className={activeSection === "projects" ? "active-link" : ""}>
+            Proyectos
           </a>
         </li>
         <li>

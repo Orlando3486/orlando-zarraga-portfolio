@@ -33,7 +33,7 @@ export default function About() {
         funcionales y bien estructuradas. Me comprometo con la calidad del
         trabajo que entrego y mantengo una mentalidad de aprendizaje constante
         para seguir creciendo como profesional y aportar cada vez más valor en
-        cada proyecto.
+        cada proyecto. Ingles: intermedio (B1).
       </p>
     </section>
   );
