@@ -62,6 +62,11 @@ main {
     display: block;
   }
 
+  .navbar {
+    padding-left: 0px;
+    padding-right: 50px;
+  }
+
   .nav-links {
     position: absolute;
     top: 70px;
