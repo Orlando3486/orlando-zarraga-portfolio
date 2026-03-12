@@ -5,18 +5,21 @@ main {
 
 .navbar {
   padding-top: env(safe-area-inset-top);
-  height: calc(80px + env(safe-area-inset-top));
   position: fixed;
   top: 0;
-  width: 100dvw;
-  height: 80px;
+  left: 0;
+  right: 0; /* ✅ En lugar de width: 100dvw */
+  height: calc(80px + env(safe-area-inset-top));
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
+  padding-left: 120px;
+  padding-right: 120px; /* ✅ Padding interno para que nada toque el borde */
   background: rgba(19, 29, 52, 0.611);
   backdrop-filter: blur(12px);
   z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  box-sizing: border-box; /* ✅ El padding no agrega ancho extra */
 }
 
 /* links desktop */
