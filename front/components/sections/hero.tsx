@@ -48,10 +48,10 @@ export default function Hero() {
 
         <div className="hero-image">
           <Image
-            src="/images/profile-image.png"
+            src="/images/orlando-profile-cartoon.png"
             alt="Foto Orlando Zárraga"
-            width={290}
-            height={320}
+            width={280}
+            height={360}
             className="profile-img"
           />
         </div>
