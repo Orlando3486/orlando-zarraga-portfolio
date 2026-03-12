@@ -184,8 +184,13 @@ export default function Tecnologies() {
     },
     { name: "BCrypt", icon: FaLock, color: "#38bdf8", category: "Backend" },
 
-    { name: "NextAuth", icon: SiNextdotjs, color: "#ffffff", category: "auth" },
-    { name: "OAuth", icon: SiAuth0, color: "#EB5424", category: "auth" },
+    {
+      name: "NextAuth",
+      icon: SiNextdotjs,
+      color: "#ffffff",
+      category: "Frontend",
+    },
+    { name: "OAuth", icon: SiAuth0, color: "#EB5424", category: "Backend" },
 
     {
       name: "Stripe",

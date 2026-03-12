@@ -9,11 +9,11 @@ main {
   position: fixed;
   top: 0;
   width: 100dvw;
-  height: 70px;
+  height: 80px;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background: rgba(15, 23, 42, 0.6);
+  background: rgba(19, 29, 52, 0.611);
   backdrop-filter: blur(12px);
   z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
