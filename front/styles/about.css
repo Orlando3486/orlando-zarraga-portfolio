@@ -12,19 +12,23 @@
 }
 
 .section-about p {
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+
   font-size: 20px;
   color: #cbd5f5;
   line-height: 1.6;
   margin-bottom: 40px;
-  text-align: justify;
+  text-align: left;
+}
+
+.highlight {
+  color: #38bdf8;
+  font-weight: 600;
 }
 
 @media (max-width: 768px) {
-  /* .section-about {
-    min-height: 40vh;
-    max-width: 1200px;
-  } */
-
   .section-about h2 {
     text-align: center;
     font-size: 22px;

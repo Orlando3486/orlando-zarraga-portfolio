@@ -26,14 +26,18 @@ export default function About() {
         proyectos en los que participo. */}
         Soy desarrollador web con una fuerte orientación al trabajo en equipo,
         la comunicación clara y la responsabilidad en cada proyecto. Trabajo con
-        tecnologías modernas como React, Next.js, Node.js, TypeScript y bases de
-        datos como PostgreSQL y MongoDB para construir aplicaciones web
-        completas y escalables. He participado en el desarrollo de proyectos
-        reales donde aprendí a transformar necesidades del cliente en soluciones
-        funcionales y bien estructuradas. Me comprometo con la calidad del
-        trabajo que entrego y mantengo una mentalidad de aprendizaje constante
-        para seguir creciendo como profesional y aportar cada vez más valor en
-        cada proyecto. Ingles: intermedio (B1).
+        tecnologías modernas como{" "}
+        <span className="highlight">
+          React, Next.js, Node.js, Nest.js TypeScript y bases de datos como
+          PostgreSQL y MongoDB{" "}
+        </span>
+        para construir aplicaciones web completas y escalables. <br /> He
+        participado en el desarrollo de proyectos reales donde aprendí a
+        transformar necesidades del cliente en soluciones funcionales y bien
+        estructuradas. Me comprometo con la calidad del trabajo que entrego y
+        mantengo una mentalidad de aprendizaje constante para seguir creciendo
+        como profesional y aportar cada vez más valor en cada proyecto. Ingles:
+        intermedio (B1).
       </p>
     </section>
   );
