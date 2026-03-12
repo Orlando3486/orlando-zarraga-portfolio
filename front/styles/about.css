@@ -1,8 +1,7 @@
 .section-about {
-  min-height: 50vh;
-  max-width: 1250px;
+  max-width: 1300px;
   margin: auto;
-  padding: 3rem 1rem;
+  padding: 2rem;
 }
 
 .section-about h2 {
@@ -21,10 +20,10 @@
 }
 
 @media (max-width: 768px) {
-  .section-about {
+  /* .section-about {
     min-height: 40vh;
     max-width: 1200px;
-  }
+  } */
 
   .section-about h2 {
     text-align: center;
