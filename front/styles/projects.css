@@ -138,3 +138,25 @@
 .green {
   background: #27c93f;
 }
+
+@media (max-width: 768px) {
+  .projects-title {
+    font-size: clamp(22px, 2vw, 30px);
+  }
+
+  .projects-subtitle {
+    font-size: clamp(14px, 2vw, 18px);
+  }
+
+  .project-card p {
+    font-size: clamp(12px, 2vw, 14px);
+  }
+
+  .tech-icons {
+    font-size: 20px;
+  }
+
+  .project-links a {
+    font-size: 14px;
+  }
+}

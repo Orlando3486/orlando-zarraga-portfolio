@@ -51,3 +51,22 @@
 .tech-item span {
   color: #38bdf8;
 }
+
+@media (max-width: 768px) {
+  .section-tecnologies h2 {
+    font-size: 22px;
+    margin-bottom: 30px;
+  }
+
+  .tech-category h3 {
+    font-size: 16px;
+  }
+
+  .tech-item {
+    padding: 6px 8px;
+  }
+
+  .tech-item span {
+    font-size: 14px;
+  }
+}
