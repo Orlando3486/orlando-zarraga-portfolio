@@ -87,3 +87,20 @@
 .scroll-top.is-idle {
   opacity: 1;
 }
+
+@media (max-width: 768px) {
+  .section-contact h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+
+  .section-contact h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .section-contact p {
+    font-size: clamp(10px, 2vw, 12px);
+    padding-top: 8px;
+  }
+}
