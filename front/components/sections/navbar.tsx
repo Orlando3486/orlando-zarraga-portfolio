@@ -3,6 +3,7 @@
 import "../../styles/navbar.css";
 import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
+import Image from "next/image";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
@@ -35,8 +36,14 @@ export default function Navbar() {
 
   return (
     <nav className="navbar">
-      <h2 className="logo">MiPortfolio</h2>
-
+      {/* <h2 className="logo">MiPortfolio</h2> */}
+      <Image
+        src="/images/logo-orlandoz.png"
+        alt="logo Orlando Zárraga"
+        width={170}
+        height={110}
+        className="logo"
+      />
       {/* icono hamburguesa */}
       <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
         {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
