@@ -58,7 +58,7 @@ export default function Projects() {
                 src={project.image}
                 alt={project.title}
                 width={400}
-                height={220}
+                height={200}
                 className="project-image"
               />
             </div>
