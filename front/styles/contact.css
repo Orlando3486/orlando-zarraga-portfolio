@@ -1,6 +1,7 @@
 .section-contact {
-  padding: 30px;
-  min-height: 50vh;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  min-height: 80vh;
   justify-content: center;
   align-items: center;
   text-align: center;
