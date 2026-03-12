@@ -170,6 +170,10 @@
 }
 
 @media (max-width: 768px) {
+  .hero-intro {
+    font-size: 20px;
+  }
+
   .hero-wrapper {
     flex-direction: column;
     text-align: center;
