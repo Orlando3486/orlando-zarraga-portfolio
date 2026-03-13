@@ -91,6 +91,10 @@
 
 @media (max-width: 768px) {
   .section-contact h2 {
+    padding-bottom: 5px;
+  }
+
+  .section-contact h2 {
     font-size: 22px;
   }
 
