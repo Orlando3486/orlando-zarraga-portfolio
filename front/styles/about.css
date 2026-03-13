@@ -15,12 +15,12 @@
   max-width: 720px;
   margin-left: auto;
   margin-right: auto;
-
+  text-indent: 1rem;
   font-size: 20px;
   color: #cbd5f5;
   line-height: 1.6;
   margin-bottom: 40px;
-  text-align: left;
+  text-align: justify;
 }
 
 .highlight {
