@@ -38,7 +38,7 @@
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 8px 11px;
+  padding: 12px 16px;
   border-radius: 8px;
   background: rgba(72, 71, 71, 0.544);
   transition: 0.3s;
@@ -59,11 +59,11 @@
   }
 
   .tech-category h3 {
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .tech-item {
-    padding: 6px 8px;
+    padding: 10px 12px;
   }
 
   .tech-item span {
