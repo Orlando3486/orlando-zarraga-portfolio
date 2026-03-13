@@ -41,10 +41,14 @@
 }
 
 .project-image {
-  margin-top: 1rem;
-  border-radius: 5px;
-  margin-bottom: 1rem;
+  margin-top: 0; /* ✅ Sin margen, la imagen toca el frame */
+  margin-bottom: 0;
+  border-radius: 0;
   transition: transform 0.4s ease;
+  /* ✅ Clave: ocupa todo el ancho y alto proporcional */
+  width: 100% !important;
+  height: auto !important;
+  display: block;
 }
 
 .project-card h3 {
@@ -56,24 +60,6 @@
   font-size: clamp(14px, 2vw, 16px);
   line-height: 1.5;
 }
-
-/* .project-card:hover .project-image {
-  transform: scale(1.05);
-} */
-
-/* .tech-stack {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin: 15px 0;
-}
-
-.tech-stack span {
-  background: #1e293b;
-  padding: 5px 10px;
-  border-radius: 8px;
-  font-size: 12px;
-} */
 
 .tech-icons {
   display: flex;
@@ -114,6 +100,7 @@
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6);
+  width: 100%;
 }
 
 .browser-header {

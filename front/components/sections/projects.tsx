@@ -57,9 +57,10 @@ export default function Projects() {
               <Image
                 src={project.image}
                 alt={project.title}
-                width={400}
-                height={200}
+                width={600}
+                height={300}
                 className="project-image"
+                style={{ width: "100%", height: "auto" }}
               />
             </div>
 
