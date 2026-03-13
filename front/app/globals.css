@@ -74,3 +74,14 @@ h4 {
   color: #94a3b8;
   font-size: 2rem;
 }
+
+@media (max-width: 768px) {
+  .intro-title {
+    font-size: 2rem;
+  }
+
+  .intro-sub {
+    margin-top: 0px;
+    font-size: 1rem;
+  }
+}
