@@ -1,5 +1,5 @@
 .section-contact {
-  padding-top: 10px;
+  padding-top: 5px;
   padding-bottom: 30px;
   min-height: 80vh;
   justify-content: center;
@@ -9,7 +9,7 @@
 
 .section-contact h2 {
   font-size: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: #38bdf8;
 }
 
@@ -92,7 +92,7 @@
 @media (max-width: 768px) {
   .section-contact h2 {
     font-size: 22px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   .section-contact h3 {

@@ -14,6 +14,7 @@ export default function Navbar() {
     const handleScroll = () => {
       let current = "";
 
+      setMenuOpen(false);
       sections.forEach((section) => {
         const sectionTop = section.offsetTop - 100;
         const sectionHeight = section.clientHeight;

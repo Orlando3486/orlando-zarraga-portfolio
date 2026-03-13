@@ -24,7 +24,7 @@
 .hero-role {
   font-size: clamp(20px, 3vw, 26px);
   color: #38bdf8;
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 .hero-description {
