@@ -50,6 +50,7 @@
   color: black;
   font-weight: 600;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .btn-primary:hover {
@@ -59,6 +60,7 @@
   border: 1px solid #38bdf8;
   padding: 12px 24px;
   border-radius: 8px;
+  transform: scale(1.1);
 }
 
 .btn-secondary {
@@ -68,6 +70,7 @@
   color: #38bdf8;
   font-weight: 600;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .btn-secondary:hover {
@@ -78,6 +81,7 @@
   border-radius: 8px;
   font-weight: 600;
   text-decoration: none;
+  transform: scale(1.1);
 }
 
 .hero-socials {

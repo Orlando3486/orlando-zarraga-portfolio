@@ -43,9 +43,9 @@
   transition: 0.3s;
 }
 
-.tech-item:hover {
+/* .tech-item:hover {
   transform: scale(1.1);
-}
+} */
 
 .tech-item span {
   color: #38bdf8;
