@@ -46,7 +46,9 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="hero-image">
+        <a
+          href="https://www.linkedin.com/in/orlando-ismael-zarraga-medina-327211171/"
+          target="_blank">
           <Image
             src="/images/orlando-profile-cartoon.png"
             alt="Foto Orlando Zárraga"
@@ -54,7 +56,7 @@ export default function Hero() {
             height={350}
             className="profile-img"
           />
-        </div>
+        </a>
       </div>
     </section>
   );
