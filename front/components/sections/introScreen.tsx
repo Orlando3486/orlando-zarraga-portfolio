@@ -1,41 +1,39 @@
 "use client";
 
-import { TypeAnimation } from "react-type-animation";
-import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { useEffect } from "react";
 
 export default function IntroScreen({ onFinish }: { onFinish: () => void }) {
-  const [fadeOut, setFadeOut] = useState(false);
-
   useEffect(() => {
-    const startFade = setTimeout(() => {
-      setFadeOut(true); // empieza la animación
-    }, 2800);
+    const timer = setTimeout(() => {
+      onFinish();
+    }, 3200);
 
-    const finish = setTimeout(() => {
-      onFinish(); // cambia a la página
-    }, 3500);
-
-    return () => {
-      clearTimeout(startFade);
-      clearTimeout(finish);
-    };
+    return () => clearTimeout(timer);
   }, [onFinish]);
 
   return (
-    <div className={`intro-screen ${fadeOut ? "fade-out" : ""}`}>
-      <TypeAnimation
-        sequence={[
-          "> initializing portfolio...",
-          800,
-          "<OrlandoZarraga/>",
-          800,
-          "Full Stack Developer",
-        ]}
-        wrapper="span"
-        speed={50}
-        repeat={0}
-        className="intro-text"
-      />
-    </div>
+    <motion.div
+      className="intro-screen"
+      initial={{ opacity: 1 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, filter: "blur(10px)", scale: 1.05 }}
+      transition={{ duration: 0.8 }}>
+      <motion.h1
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="intro-title">
+        {"<OrlandoZarraga />"}
+      </motion.h1>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1 }}
+        className="intro-sub">
+        Full Stack Developer
+      </motion.p>
+    </motion.div>
   );
 }

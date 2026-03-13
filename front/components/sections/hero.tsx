@@ -5,59 +5,66 @@ import "./../../styles/hero.css";
 import Image from "next/image";
 import TypingText from "./typingText";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section id="hero" className="hero">
-      <div className="hero-wrapper">
-        <div className="hero-text">
-          <p className="hero-intro">Hola, soy</p>
+    <motion.section
+      className="hero"
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1 }}>
+      <section id="hero" className="hero">
+        <div className="hero-wrapper">
+          <div className="hero-text">
+            <p className="hero-intro">Hola, soy</p>
 
-          <h1 className="hero-title">Orlando Zárraga</h1>
+            <h1 className="hero-title">Orlando Zárraga</h1>
 
-          <h2 className="hero-role">
-            <TypingText />
-          </h2>
+            <h2 className="hero-role">
+              <TypingText />
+            </h2>
 
-          <p className="hero-description">
-            Construyo aplicaciones modernas, escalables y bien estructuradas
-            utilizando tecnologías del ecosistema JavaScript.
-          </p>
+            <p className="hero-description">
+              Construyo aplicaciones modernas, escalables y bien estructuradas
+              utilizando tecnologías del ecosistema JavaScript.
+            </p>
 
-          <div className="hero-buttons">
-            <a href="#projects" className="btn-primary">
-              Ver proyectos
-            </a>
+            <div className="hero-buttons">
+              <a href="#projects" className="btn-primary">
+                Ver proyectos
+              </a>
 
-            <a href="#contact" className="btn-secondary">
-              Contactarme
-            </a>
+              <a href="#contact" className="btn-secondary">
+                Contactarme
+              </a>
+            </div>
+
+            <div className="hero-socials">
+              <a href="https://github.com/Orlando3486" target="_blank">
+                <FaGithub size={34} color="#ffffff" />
+              </a>
+              <a
+                href="https://www.linkedin.com/in/orlando-ismael-zarraga-medina-327211171/"
+                target="_blank">
+                <FaLinkedin size={34} color="#0A66C2" />
+              </a>
+            </div>
           </div>
 
-          <div className="hero-socials">
-            <a href="https://github.com/Orlando3486" target="_blank">
-              <FaGithub size={34} color="#ffffff" />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/orlando-ismael-zarraga-medina-327211171/"
-              target="_blank">
-              <FaLinkedin size={34} color="#0A66C2" />
-            </a>
-          </div>
+          <a
+            href="https://www.linkedin.com/in/orlando-ismael-zarraga-medina-327211171/"
+            target="_blank">
+            <Image
+              src="/images/orlando-profile-cartoon.png"
+              alt="Foto Orlando Zárraga"
+              width={260}
+              height={350}
+              className="profile-img"
+            />
+          </a>
         </div>
-
-        <a
-          href="https://www.linkedin.com/in/orlando-ismael-zarraga-medina-327211171/"
-          target="_blank">
-          <Image
-            src="/images/orlando-profile-cartoon.png"
-            alt="Foto Orlando Zárraga"
-            width={260}
-            height={350}
-            className="profile-img"
-          />
-        </a>
-      </div>
-    </section>
+      </section>
+    </motion.section>
   );
 }
