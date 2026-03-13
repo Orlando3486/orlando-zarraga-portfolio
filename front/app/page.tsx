@@ -1,24 +1,15 @@
-import InteractiveNetwork from "../components/background/InteractiveNetwork";
-import Hero from "../components/sections/hero";
-import Projects from "../components/sections/projects";
-import About from "../components/sections/about";
-import Tecnologies from "../components/sections/tecnologies";
-import Contact from "../components/sections/contact";
-import Navbar from "../components/sections/navbar";
+"use client";
 
-export default function Home() {
-  return (
-    <>
-      <InteractiveNetwork />
-      <Navbar />
+import { useState } from "react";
+import IntroScreen from "../components/sections/introScreen";
+import Home from "./home";
 
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Tecnologies />
-        <Contact />
-      </main>
-    </>
-  );
+export default function Page() {
+  const [showIntro, setShowIntro] = useState(true);
+
+  if (showIntro) {
+    return <IntroScreen onFinish={() => setShowIntro(false)} />;
+  }
+
+  return <Home />;
 }
