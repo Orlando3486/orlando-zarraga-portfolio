@@ -1,0 +1,26 @@
+/* Etiquetas de tecnologías: mismo estilo que .tech-item, en tamaño reducido */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+}
+
+.tag {
+  padding: 6px 10px;
+  border-radius: 8px;
+  background: rgba(72, 71, 71, 0.544);
+  color: #38bdf8;
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+  .tag {
+    font-size: 12px;
+    padding: 5px 8px;
+  }
+}

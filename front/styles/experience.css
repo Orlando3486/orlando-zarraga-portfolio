@@ -1,0 +1,154 @@
+.section-experience {
+  max-width: 1000px;
+  margin: auto;
+  padding: 2rem 1rem;
+}
+
+.section-experience h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #38bdf8;
+}
+
+.experience-timeline {
+  list-style: none;
+  padding: 0 0 0 24px;
+  margin: 0;
+  border-left: 2px solid rgba(56, 189, 248, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.experience-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.35s ease;
+}
+
+.experience-card::before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: 26px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #38bdf8;
+  box-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
+}
+
+.experience-card:hover {
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 25px rgba(56, 189, 248, 0.25);
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.experience-header h3 {
+  margin: 0;
+  color: #cbd5f5;
+  font-size: 20px;
+}
+
+.experience-location {
+  color: #94a3b8;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.experience-role {
+  margin: 4px 0 0;
+  color: #38bdf8;
+  font-weight: 600;
+}
+
+.experience-period {
+  color: #94a3b8;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.experience-description,
+.experience-achievements li {
+  color: #cbd5f5;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.experience-links {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 8px;
+}
+
+.experience-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #38bdf8;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.experience-links a:hover {
+  color: #cbd5f5;
+}
+
+.experience-achievements {
+  padding-left: 20px;
+  margin: 12px 0;
+}
+
+.experience-achievements li {
+  margin-bottom: 6px;
+}
+
+.experience-achievements li::marker {
+  color: #38bdf8;
+}
+
+.experience-tags {
+  justify-content: flex-start;
+}
+
+@media (max-width: 768px) {
+  .section-experience h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  .experience-timeline {
+    padding-left: 16px;
+  }
+
+  .experience-card {
+    padding: 16px;
+  }
+
+  .experience-card::before {
+    left: -23px;
+    width: 10px;
+    height: 10px;
+  }
+
+  .experience-header h3 {
+    font-size: 17px;
+  }
+
+  .experience-description,
+  .experience-achievements li {
+    font-size: 14px;
+  }
+}

@@ -2,6 +2,8 @@
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "./../../styles/contact.css";
 import { MdEmail } from "react-icons/md";
+import { FaMapMarkerAlt } from "react-icons/fa";
+import { profile } from "../../data/profile";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
@@ -52,23 +54,32 @@ export default function Contact() {
       />
       <ul className="contacts-links">
         <li className="contact-links">
-          <a href="mailto:orlandozarraga31@hotmail.com">
+          <a href={`mailto:${profile.contact.email}`} aria-label="Email">
             <MdEmail size={36} />
           </a>
         </li>
         <li className="contact-links">
           <a
-            href="https://www.linkedin.com/in/orlando-ismael-zarraga-medina-327211171/"
-            target="_blank">
+            href={profile.contact.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn">
             <FaLinkedin size={36} color="#0A66C2" />
           </a>
         </li>
         <li className="contact-links">
-          <a href="https://github.com/Orlando3486" target="_blank">
+          <a
+            href={profile.contact.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub">
             <FaGithub size={36} color="#ffffff" />
           </a>
         </li>
       </ul>
+      <p className="contact-location">
+        <FaMapMarkerAlt color="#38bdf8" /> {profile.contact.location}
+      </p>
       <a
         href="#hero"
         className={`scroll-top ${idle ? "is-idle" : ""}`}
@@ -77,7 +88,7 @@ export default function Contact() {
         ↑
       </a>
       <p>
-        Orlando Zarraga | Desarrollador Full Stack, <br /> &copy;{" "}
+        {profile.name} | Desarrollador Full Stack, <br /> &copy;{" "}
         {new Date().getFullYear()}. Todos los derechos reservados.
       </p>
     </section>
