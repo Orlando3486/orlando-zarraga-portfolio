@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
+import { profile } from "../../data/profile";
 import "./../../styles/typingText.css";
 
 export default function TypingText() {
@@ -9,13 +10,7 @@ export default function TypingText() {
 
   useEffect(() => {
     const typed = new Typed(el.current!, {
-      strings: [
-        "Full Stack Developer",
-        "Backend Developer",
-        "Next.js Developer",
-        "React Specialist",
-        "Node.js Engineer",
-      ],
+      strings: profile.roles,
       typeSpeed: 60,
       backSpeed: 40,
       backDelay: 1500,

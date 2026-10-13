@@ -6,6 +6,7 @@ import Image from "next/image";
 import TypingText from "./typingText";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { motion } from "framer-motion";
+import { profile } from "../../data/profile";
 
 export default function Hero() {
   return (
@@ -19,15 +20,14 @@ export default function Hero() {
           <div className="hero-text">
             <p className="hero-intro">Hola, soy</p>
 
-            <h1 className="hero-title">Orlando Zárraga</h1>
+            <h1 className="hero-title">{profile.name}</h1>
 
             <h2 className="hero-role">
               <TypingText />
             </h2>
 
             <p className="hero-description">
-              Construyo aplicaciones modernas, escalables y bien estructuradas
-              utilizando tecnologías del ecosistema JavaScript.
+              {profile.heroDescription}
             </p>
 
             <div className="hero-buttons">
@@ -41,23 +41,30 @@ export default function Hero() {
             </div>
 
             <div className="hero-socials">
-              <a href="https://github.com/Orlando3486" target="_blank">
+              <a
+                href={profile.contact.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub">
                 <FaGithub size={34} color="#ffffff" />
               </a>
               <a
-                href="https://www.linkedin.com/in/orlando-ismael-zarraga-medina-327211171/"
-                target="_blank">
+                href={profile.contact.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="LinkedIn">
                 <FaLinkedin size={34} color="#0A66C2" />
               </a>
             </div>
           </div>
 
           <a
-            href="https://www.linkedin.com/in/orlando-ismael-zarraga-medina-327211171/"
-            target="_blank">
+            href={profile.contact.linkedin}
+            target="_blank"
+            rel="noopener noreferrer">
             <Image
               src="/images/orlando-profile-cartoon.png"
-              alt="Foto Orlando Zárraga"
+              alt={`Foto ${profile.name}`}
               width={260}
               height={350}
               className="profile-img"

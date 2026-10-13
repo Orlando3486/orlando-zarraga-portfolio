@@ -69,6 +69,14 @@ export default function Navbar() {
         </li>
         <li>
           <a
+            href="#experience"
+            onClick={() => setMenuOpen(false)}
+            className={activeSection === "experience" ? "active-link" : ""}>
+            Experiencia
+          </a>
+        </li>
+        <li>
+          <a
             href="#projects"
             onClick={() => setMenuOpen(false)}
             className={activeSection === "projects" ? "active-link" : ""}>
