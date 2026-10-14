@@ -50,6 +50,26 @@ export const experience: Experience[] = [
     ],
   },
   {
+    company: "InfinitySoftware — Canarias Equipamientos",
+    role: "Arquitecto y Desarrollador Backend (Freelance) — equipo de 3 desarrolladores",
+    period: "May. 2026 – Presente",
+    achievements: [
+      "Diseñé la arquitectura en capas del backend NestJS de una plataforma de gestión de ventas a crédito y cobranza, y creé 25 de sus 26 módulos con API (~146 de 161 endpoints) sobre PostgreSQL y TypeORM.",
+      "Implementé autenticación JWT con Passport, operación multi-empresa con aislamiento de datos por sociedad y control de acceso por 5 roles, junto con los módulos de hojas de ruta de cobranza, cierres diarios, liquidaciones, caja y reportes en PDF y Excel.",
+      "Configuré el monorepo pnpm, los contenedores Docker y el despliegue del backend, el frontend y la base de datos en Render.",
+    ],
+    tags: [
+      "NestJS",
+      "TypeScript",
+      "PostgreSQL",
+      "TypeORM",
+      "Passport",
+      "Docker",
+      "Render",
+      "Next.js",
+    ],
+  },
+  {
     company: "Monetae",
     location: "El Salvador",
     role: "Desarrollador Full Stack · Prácticas profesionales",

@@ -11,12 +11,6 @@ export const projects: Project[] = [
     image: "/images/zarmedi-inicio.png",
     gallery: [
       { src: "/images/zarmedi-inicio.png", alt: "ZarMedi - Panel de inicio" },
-      { src: "/images/zarmedi-agenda.png", alt: "ZarMedi - Agenda semanal" },
-      {
-        src: "/images/zarmedi-pacientes.png",
-        alt: "ZarMedi - Gestión de pacientes",
-      },
-      { src: "/images/zarmedi-equipo.png", alt: "ZarMedi - Equipo del centro" },
       { src: "/images/zarmedi-login.png", alt: "ZarMedi - Inicio de sesión" },
     ],
     featured: true,
@@ -36,6 +30,22 @@ export const projects: Project[] = [
       { label: "Sitio", url: "https://zarmedi.com/" },
       { label: "App", url: "https://app.zarmedi.com/login" },
     ],
+  },
+  {
+    title: "Canarias Equipamientos — Gestión de ventas a crédito",
+    description:
+      "Plataforma de gestión integral para empresas de venta de equipamiento a crédito: digitaliza el ciclo completo, desde la venta en calle y la validación del cliente hasta la entrega, el cobro de cuotas en hojas de ruta diarias y el cierre de caja, con paneles por rol y operación multi-empresa. Mi rol: arquitectura y desarrollo del backend.",
+    image: "/images/canarias002.png",
+    // App privada con login: sin enlace público
+    gallery: [
+      { src: "/images/canarias002.png", alt: "Canarias - Panel inicial del vendedor" },
+      { src: "/images/canarias004.png", alt: "Canarias - Mis ventas" },
+      { src: "/images/canarias005.png", alt: "Canarias - Gestión de clientes" },
+      { src: "/images/canarias003.png", alt: "Canarias - Nueva venta" },
+      { src: "/images/canarias001.png", alt: "Canarias - Inicio de sesión" },
+    ],
+    context: "Proyecto de InfinitySoftware · En desarrollo",
+    tags: ["NestJS", "Next.js", "TypeScript", "PostgreSQL", "Docker"],
   },
   {
     title: "¡Si Chef! - Plataforma de Recetas",
