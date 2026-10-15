@@ -18,6 +18,13 @@
   height: var(--nav-h);
 }
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* Logo recortado al contenido: todo el alto es logo */
 .logo {
   width: auto;
   height: 56px;

@@ -57,12 +57,14 @@ export default function Navbar({
   return (
     <nav className="navbar" aria-label={dict.label}>
       <div className="container navbar-inner">
-        <a href="#hero" aria-label={dict.home}>
+        <a href="#hero" className="navbar-brand" aria-label={dict.home}>
+          {/* Versión recortada al contenido (620 × 652): width/height son el tamaño
+              mostrado en desktop, así next/image genera variantes nítidas en 1x y 2x */}
           <Image
-            src="/images/logo-orlandoz.png"
+            src="/images/logo-orlandoz-nav.png"
             alt="Logo Orlando Zárraga"
-            width={170}
-            height={110}
+            width={53}
+            height={56}
             className="logo"
             priority
           />
