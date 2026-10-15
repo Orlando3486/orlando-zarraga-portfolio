@@ -6,6 +6,7 @@ import Image from "next/image";
 import TypingText from "./typingText";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { profile } from "../../data/profile";
+import CvMenu from "../ui/cvMenu";
 
 export default function Hero() {
   return (
@@ -29,6 +30,11 @@ export default function Hero() {
               <a href="#projects" className="btn-primary">
                 Ver proyectos
               </a>
+
+              <CvMenu
+                locale="es"
+                labels={{ button: "Descargar CV", fullstack: "Full Stack", backend: "Backend" }}
+              />
 
               <a href="#contact" className="btn-secondary">
                 Contactarme

@@ -4,6 +4,7 @@ import "./../../styles/contact.css";
 import { MdEmail } from "react-icons/md";
 import { FaMapMarkerAlt } from "react-icons/fa";
 import { profile } from "../../data/profile";
+import CvMenu from "../ui/cvMenu";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
@@ -77,6 +78,10 @@ export default function Contact() {
           </a>
         </li>
       </ul>
+      <CvMenu
+        locale="es"
+        labels={{ button: "Descargar CV", fullstack: "Full Stack", backend: "Backend" }}
+      />
       <p className="contact-location">
         <FaMapMarkerAlt color="#38bdf8" /> {profile.contact.location}
       </p>
