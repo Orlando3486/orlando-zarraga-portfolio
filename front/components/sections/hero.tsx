@@ -1,5 +1,3 @@
-"use client";
-
 import "./../../styles/hero.css";
 
 import Image from "next/image";
@@ -20,66 +18,61 @@ export default function Hero({
   profile: Profile;
 }) {
   return (
-    <section className="hero">
-      <section id="hero" className="hero">
-        <div className="hero-wrapper">
-          <div className="hero-text">
-            <p className="hero-intro">{dict.hero.greeting}</p>
+    <section id="hero" className="hero section">
+      <div className="container hero-grid">
+        <div className="hero-text">
+          <p className="eyebrow">{dict.hero.greeting}</p>
+          <h1>{profile.name}</h1>
+          <p className="hero-role">
+            <TypingText roles={profile.roles} />
+          </p>
+          <p className="lead hero-lead">{profile.heroDescription}</p>
 
-            <h1 className="hero-title">{profile.name}</h1>
+          <div className="hero-actions">
+            <a href="#projects" className="btn btn-primary">
+              {dict.hero.viewProjects}
+            </a>
+            <CvMenu locale={locale} labels={dict.cv} />
+            <a href="#contact" className="btn btn-secondary">
+              {dict.hero.contact}
+            </a>
+          </div>
 
-            <h2 className="hero-role">
-              <TypingText roles={profile.roles} />
-            </h2>
-
-            <p className="hero-description">
-              {profile.heroDescription}
-            </p>
-
-            <div className="hero-buttons">
-              <a href="#projects" className="btn-primary">
-                {dict.hero.viewProjects}
-              </a>
-
-              <CvMenu locale={locale} labels={dict.cv} />
-
-              <a href="#contact" className="btn-secondary">
-                {dict.hero.contact}
-              </a>
-            </div>
-
-            <div className="hero-socials">
+          <ul className="hero-socials">
+            <li>
               <a
                 href={profile.contact.github}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="icon-btn"
                 aria-label="GitHub">
-                <FaGithub size={34} color="#ffffff" />
+                <FaGithub className="icon" aria-hidden="true" />
               </a>
+            </li>
+            <li>
               <a
                 href={profile.contact.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="icon-btn"
                 aria-label="LinkedIn">
-                <FaLinkedin size={34} color="#0A66C2" />
+                <FaLinkedin className="icon" aria-hidden="true" />
               </a>
-            </div>
-          </div>
-
-          <a
-            href={profile.contact.linkedin}
-            target="_blank"
-            rel="noopener noreferrer">
-            <Image
-              src="/images/orlando-profile-cartoon.png"
-              alt={dict.hero.photoAlt}
-              width={260}
-              height={350}
-              className="profile-img"
-            />
-          </a>
+            </li>
+          </ul>
         </div>
-      </section>
+
+        <div className="hero-media">
+          <Image
+            src="/images/orlando-profile-cartoon.png"
+            alt={dict.hero.photoAlt}
+            width={260}
+            height={350}
+            priority
+            className="profile-img"
+          />
+        </div>
+      </div>
     </section>
   );
 }

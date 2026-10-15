@@ -106,7 +106,7 @@ export const skills: Skill[] = [
   { name: "Multi-tenancy", icon: TbBuildings, color: "#38bdf8", category: "architecture" },
 
   // Seguridad
-  { name: "JWT", icon: SiJsonwebtokens, color: "#000000", category: "security" },
+  { name: "JWT", icon: SiJsonwebtokens, color: "#f8fafc", category: "security" },
   { name: "OAuth2", icon: SiAuth0, color: "#EB5424", category: "security" },
   { name: "Auth0", icon: SiAuth0, color: "#EB5424", category: "security" },
   { name: "Passport", icon: SiPassport, color: "#34E27A", category: "security" },
@@ -136,7 +136,7 @@ export const skills: Skill[] = [
   { name: "SQL Server", icon: FaDatabase, color: "#CC2927", category: "databases" },
   { name: "MongoDB", icon: SiMongodb, color: "#4DB33D", category: "databases" },
   { name: "TypeORM", icon: SiTypeorm, color: "#E83524", category: "databases" },
-  { name: "Prisma", icon: SiPrisma, color: "#2D3748", category: "databases" },
+  { name: "Prisma", icon: SiPrisma, color: "#f8fafc", category: "databases" },
 
   // Cloud y DevOps
   { name: "Docker", icon: FaDocker, color: "#2496ED", category: "cloud" },

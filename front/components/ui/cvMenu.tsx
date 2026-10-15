@@ -17,7 +17,7 @@ const variants: CvVariant[] = ["fullstack", "backend"];
 export default function CvMenu({
   locale,
   labels,
-  className = "btn-secondary",
+  className = "btn btn-secondary",
 }: {
   locale: Locale;
   labels: CvMenuLabels;
@@ -58,9 +58,9 @@ export default function CvMenu({
         aria-expanded={open}
         aria-controls={menuId}
         onClick={() => setOpen((value) => !value)}>
-        <FiDownload size={20} aria-hidden="true" />
+        <FiDownload className="icon" aria-hidden="true" />
         {labels.button}
-        <FiChevronDown size={20} aria-hidden="true" className="cv-menu-chevron" />
+        <FiChevronDown className="icon cv-menu-chevron" aria-hidden="true" />
       </button>
 
       <ul id={menuId} className="cv-menu-list" hidden={!open}>

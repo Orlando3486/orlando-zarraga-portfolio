@@ -1,118 +1,56 @@
-.section-contact {
-  /* padding-top: 10px; */
-  padding-bottom: 40px;
-  min-height: 80vh;
-  justify-content: center;
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 440px), 1fr));
+  gap: var(--sp-3);
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.contact-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-3);
+}
+
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-2);
+}
+
+.contact-location {
+  display: flex;
   align-items: center;
+  gap: var(--sp-1);
+}
+
+.contact-location .icon {
+  color: var(--accent);
+}
+
+/* Pie de página */
+.site-footer {
+  padding: var(--sp-4) 0;
+  border-top: 1px solid var(--line);
   text-align: center;
-}
-
-.section-contact h2 {
-  font-size: 30px;
-  margin-bottom: 30px;
-  color: #38bdf8;
-}
-
-.section-contact h3 {
-  font-size: 20px;
-  margin-bottom: 20px;
-  color: #cbd5f5;
-}
-
-.section-contact p {
-  padding-top: 10px;
-  font-size: clamp(11px, 2vw, 9px);
-  color: #cbd5f5;
-  line-height: 1.6;
-  text-align: center;
-}
-
-.contacts-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding: 0px;
-  text-decoration: none;
-}
-
-.contact-links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  padding-top: 0.5rem;
-}
-
-.contact-links a {
-  color: #38bdf8;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.contact-links a:hover {
-  transform: scale(1.2);
-}
-
-.avatar {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2rem;
-  user-select: none;
-  pointer-events: none;
-  opacity: 1;
-  transform: none;
 }
 
 .scroll-top {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #38bdf8;
-  color: white;
-  padding: 10px 14px;
-  border-radius: 50%;
-  font-size: 18px;
+  right: var(--sp-2);
+  bottom: var(--sp-2);
   z-index: 50;
-
-  /* ✅ Translúcido mientras scrollea */
-  opacity: 0.35;
-  transition: transform 0.3s ease, opacity 0.4s ease, bottom 0.2s ease;
-}
-
-.scroll-top:hover {
-  transform: translateY(-4px);
-  opacity: 1;
-}
-
-/* ✅ Nítido cuando está en reposo */
-.scroll-top.is-idle {
-  opacity: 1;
+  background: var(--surface-solid);
 }
 
 @media (max-width: 768px) {
-  .section-contact h2 {
-    padding-bottom: 5px;
+  .contact-actions {
+    flex-direction: column;
+    align-items: stretch;
   }
 
-  .section-contact h2 {
-    font-size: 22px;
+  .contact-actions .cv-menu,
+  .contact-actions .cv-menu > button {
+    width: 100%;
   }
-
-  .section-contact h3 {
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-
-  .section-contact p {
-    font-size: clamp(10px, 2vw, 12px);
-    padding-top: 8px;
-  }
-}
-
-.section-contact .contact-location {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-size: 16px;
 }

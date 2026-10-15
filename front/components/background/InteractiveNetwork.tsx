@@ -22,7 +22,7 @@ export default function InteractiveNetwork() {
       canvas.height = height * dpr;
       canvas.style.width = width + "px";
       canvas.style.height = height + "px";
-      ctx.scale(dpr, dpr);
+      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     }
 
     resizeCanvas();
@@ -58,6 +58,9 @@ export default function InteractiveNetwork() {
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("touchmove", handleTouchMove, { passive: true });
     window.addEventListener("touchend", handleTouchEnd);
+
+    // Con movimiento reducido se dibuja un único cuadro estático
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     function draw() {
       ctx.fillStyle = "#020617";
@@ -103,7 +106,7 @@ export default function InteractiveNetwork() {
         }
       });
 
-      animationId = requestAnimationFrame(draw);
+      if (!reducedMotion) animationId = requestAnimationFrame(draw);
     }
 
     draw();
@@ -112,7 +115,10 @@ export default function InteractiveNetwork() {
     let resizeTimer: ReturnType<typeof setTimeout>;
     function debouncedResize() {
       clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(resizeCanvas, 100);
+      resizeTimer = setTimeout(() => {
+        resizeCanvas();
+        if (reducedMotion) draw();
+      }, 100);
     }
 
     window.addEventListener("resize", debouncedResize);

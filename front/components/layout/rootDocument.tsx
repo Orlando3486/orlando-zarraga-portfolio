@@ -14,8 +14,11 @@ export default function RootDocument({
   children: ReactNode;
 }) {
   return (
-    <html lang={locale} suppressHydrationWarning>
-      <body className={`${inter.variable} ${poppins.variable} antialiased`}>
+    <html
+      lang={locale}
+      className={`${inter.variable} ${poppins.variable}`}
+      suppressHydrationWarning>
+      <body className="antialiased">
         {/* Primero en el body: decide la intro antes de pintar el contenido */}
         <script dangerouslySetInnerHTML={{ __html: introScript }} />
         <script

@@ -3,6 +3,7 @@ import { localize } from "../../data";
 import { skillCategories, skills } from "../../data/skills";
 import type { Dictionary } from "../../i18n";
 import type { Locale } from "../../lib/i18n";
+import SectionHead from "../ui/sectionHead";
 
 export default function Tecnologies({
   locale,
@@ -12,30 +13,34 @@ export default function Tecnologies({
   dict: Dictionary["skills"];
 }) {
   return (
-    <section id="tecnologies" className="section-tecnologies">
-      <h2>{dict.title}</h2>
+    <section id="tecnologies" className="section" aria-labelledby="tecnologies-title">
+      <div className="container">
+        <SectionHead id="tecnologies-title" text={dict} />
 
-      {skillCategories.map((category) => (
-        <div key={category} className="tech-category">
-          <h3>{dict.categories[category]}</h3>
+        <div className="tech-categories">
+          {skillCategories.map((category) => (
+            <div key={category} className="card tech-category">
+              <h3>{dict.categories[category]}</h3>
 
-          <div className="tech-grid">
-            {skills
-              .filter((tech) => tech.category === category)
-              .map((tech) => {
-                const Icon = tech.icon;
-                const name = localize(tech.name, locale);
+              <ul className="tech-grid">
+                {skills
+                  .filter((tech) => tech.category === category)
+                  .map((tech) => {
+                    const Icon = tech.icon;
+                    const name = localize(tech.name, locale);
 
-                return (
-                  <div key={name} className="tech-item">
-                    <Icon size={24} color={tech.color} />
-                    <span>{name}</span>
-                  </div>
-                );
-              })}
-          </div>
+                    return (
+                      <li key={name} className="tech-item">
+                        <Icon className="icon" color={tech.color} aria-hidden="true" />
+                        <span>{name}</span>
+                      </li>
+                    );
+                  })}
+              </ul>
+            </div>
+          ))}
         </div>
-      ))}
+      </div>
     </section>
   );
 }

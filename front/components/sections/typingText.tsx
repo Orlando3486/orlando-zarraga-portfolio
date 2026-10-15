@@ -2,12 +2,14 @@
 
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
-import "./../../styles/typingText.css";
 
 export default function TypingText({ roles }: { roles: string[] }) {
-  const el = useRef(null);
+  const el = useRef<HTMLSpanElement>(null);
 
   useEffect(() => {
+    // Con movimiento reducido queda el primer rol fijo
+    if (matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
     const typed = new Typed(el.current!, {
       strings: roles,
       typeSpeed: 60,
@@ -21,13 +23,5 @@ export default function TypingText({ roles }: { roles: string[] }) {
     };
   }, [roles]);
 
-  return (
-    <span
-      ref={el}
-      style={{
-        color: "#38bdf8",
-        fontWeight: "600",
-      }}
-    />
-  );
+  return <span ref={el}>{roles[0]}</span>;
 }

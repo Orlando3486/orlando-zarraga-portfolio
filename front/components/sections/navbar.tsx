@@ -56,53 +56,62 @@ export default function Navbar({
 
   return (
     <nav className="navbar" aria-label={dict.label}>
-      <Image
-        src="/images/logo-orlandoz.png"
-        alt="Logo Orlando Zárraga"
-        width={170}
-        height={110}
-        className="logo"
-      />
+      <div className="container navbar-inner">
+        <a href="#hero" aria-label={dict.home}>
+          <Image
+            src="/images/logo-orlandoz.png"
+            alt="Logo Orlando Zárraga"
+            width={170}
+            height={110}
+            className="logo"
+            priority
+          />
+        </a>
 
-      <div className="navbar-actions">
-        {/* Selector de idioma: enlaces normales, sin redirección automática */}
-        <ul className="lang-switch" aria-label={dict.language}>
-          {locales.map((item) => (
-            <li key={item}>
+        <ul id="nav-links" className={menuOpen ? "nav-links active" : "nav-links"}>
+          {links.map((link) => (
+            <li key={link.id}>
               <a
-                href={localePath(item)}
-                hrefLang={item}
-                lang={item}
-                aria-current={item === locale ? "true" : undefined}>
-                {item.toUpperCase()}
+                href={`#${link.id}`}
+                onClick={() => setMenuOpen(false)}
+                className={activeSection === link.id ? "active-link" : ""}>
+                {link.label}
               </a>
             </li>
           ))}
         </ul>
 
-        <button
-          type="button"
-          className="menu-icon"
-          aria-label={menuOpen ? dict.closeMenu : dict.openMenu}
-          aria-expanded={menuOpen}
-          aria-controls="nav-links"
-          onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
-        </button>
-      </div>
+        <div className="navbar-actions">
+          {/* Selector de idioma: enlaces normales, sin redirección automática */}
+          <ul className="lang-switch" aria-label={dict.language}>
+            {locales.map((item) => (
+              <li key={item}>
+                <a
+                  href={localePath(item)}
+                  hrefLang={item}
+                  lang={item}
+                  aria-current={item === locale ? "true" : undefined}>
+                  {item.toUpperCase()}
+                </a>
+              </li>
+            ))}
+          </ul>
 
-      <ul id="nav-links" className={menuOpen ? "nav-links active" : "nav-links"}>
-        {links.map((link) => (
-          <li key={link.id}>
-            <a
-              href={`#${link.id}`}
-              onClick={() => setMenuOpen(false)}
-              className={activeSection === link.id ? "active-link" : ""}>
-              {link.label}
-            </a>
-          </li>
-        ))}
-      </ul>
+          <button
+            type="button"
+            className="icon-btn menu-icon"
+            aria-label={menuOpen ? dict.closeMenu : dict.openMenu}
+            aria-expanded={menuOpen}
+            aria-controls="nav-links"
+            onClick={() => setMenuOpen(!menuOpen)}>
+            {menuOpen ? (
+              <FaTimes className="icon" aria-hidden="true" />
+            ) : (
+              <FaBars className="icon" aria-hidden="true" />
+            )}
+          </button>
+        </div>
+      </div>
     </nav>
   );
 }

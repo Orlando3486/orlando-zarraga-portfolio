@@ -21,10 +21,10 @@ export default function ProjectGallery({
   return (
     <div className="project-gallery">
       <div className="browser-frame">
-        <div className="browser-header">
-          <div className="browser-dot red"></div>
-          <div className="browser-dot yellow"></div>
-          <div className="browser-dot green"></div>
+        <div className="browser-header" aria-hidden="true">
+          <span className="browser-dot red" />
+          <span className="browser-dot yellow" />
+          <span className="browser-dot green" />
         </div>
         <div className="gallery-viewport">
           {images.map((image, index) => (
@@ -33,7 +33,7 @@ export default function ProjectGallery({
               src={image.src}
               alt={image.alt}
               fill
-              sizes="(max-width: 768px) 100vw, 650px"
+              sizes="(max-width: 768px) 100vw, 560px"
               className={`gallery-image ${index === current ? "is-active" : ""}`}
               aria-hidden={index !== current}
               priority={index === 0}
@@ -41,22 +41,24 @@ export default function ProjectGallery({
           ))}
           <button
             type="button"
-            className="gallery-arrow prev"
+            className="icon-btn gallery-arrow prev"
             onClick={() => goTo(current - 1)}
             aria-label={dict.previousImage}>
-            <FiChevronLeft size={22} />
+            <FiChevronLeft className="icon" aria-hidden="true" />
           </button>
           <button
             type="button"
-            className="gallery-arrow next"
+            className="icon-btn gallery-arrow next"
             onClick={() => goTo(current + 1)}
             aria-label={dict.nextImage}>
-            <FiChevronRight size={22} />
+            <FiChevronRight className="icon" aria-hidden="true" />
           </button>
         </div>
       </div>
 
-      <p className="gallery-caption">{images[current].alt}</p>
+      <p className="small gallery-caption" aria-live="polite">
+        {images[current].alt}
+      </p>
 
       <div className="gallery-thumbs">
         {images.map((image, index) => (

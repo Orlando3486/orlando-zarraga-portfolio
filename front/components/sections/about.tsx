@@ -1,8 +1,9 @@
 import "./../../styles/about.css";
 import { Fragment } from "react";
-import { FaGraduationCap, FaMapMarkerAlt } from "react-icons/fa";
+import { FaGraduationCap, FaLanguage, FaMapMarkerAlt } from "react-icons/fa";
 import type { Dictionary } from "../../i18n";
 import type { Education, Profile } from "../../types/portfolio";
+import SectionHead from "../ui/sectionHead";
 
 // Envuelve en .highlight los fragmentos de profile.highlights dentro del resumen
 function renderSummary(text: string, highlights: string[]) {
@@ -32,35 +33,50 @@ export default function About({
   education: Education[];
 }) {
   return (
-    <section id="about" className="section-about">
-      <h2>{dict.title}</h2>
-      <p>{renderSummary(profile.summary, profile.highlights)}</p>
+    <section id="about" className="section" aria-labelledby="about-title">
+      <div className="container">
+        <SectionHead id="about-title" text={dict} />
 
-      <ul className="about-facts">
-        <li>
-          <FaMapMarkerAlt color="#38bdf8" /> {profile.contact.location}
-        </li>
-        <li>
-          {dict.languages}: {profile.languages}
-        </li>
-      </ul>
+        <div className="about-grid">
+          <div className="card about-summary">
+            <p>{renderSummary(profile.summary, profile.highlights)}</p>
 
-      <div className="about-education">
-        <h3>
-          <FaGraduationCap color="#38bdf8" /> {dict.education}
-        </h3>
-        <ul>
-          {education.map((item) => (
-            <li key={`${item.institution}-${item.period}`}>
-              <span>
-                <span className="highlight">{item.title}</span> —{" "}
-                {item.institution}
-                {item.detail && ` · ${item.detail}`}
-              </span>
-              <span className="about-education-period">{item.period}</span>
-            </li>
-          ))}
-        </ul>
+            <dl className="about-facts">
+              <div>
+                <dt>
+                  <FaMapMarkerAlt className="icon" aria-hidden="true" />
+                  {dict.location}
+                </dt>
+                <dd>{profile.contact.location}</dd>
+              </div>
+              <div>
+                <dt>
+                  <FaLanguage className="icon" aria-hidden="true" />
+                  {dict.languages}
+                </dt>
+                <dd>{profile.languages}</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div className="card about-education">
+            <h3>
+              <FaGraduationCap className="icon" aria-hidden="true" />
+              {dict.education}
+            </h3>
+            <ul>
+              {education.map((item) => (
+                <li key={`${item.institution}-${item.period}`}>
+                  <p className="about-education-title">{item.title}</p>
+                  <p className="small">
+                    {item.institution}
+                    {item.detail && ` · ${item.detail}`} · {item.period}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
   );

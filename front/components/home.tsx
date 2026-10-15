@@ -2,6 +2,7 @@ import InteractiveNetwork from "./background/InteractiveNetwork";
 import About from "./sections/about";
 import Contact from "./sections/contact";
 import Experience from "./sections/experience";
+import Footer from "./sections/footer";
 import Hero from "./sections/hero";
 import IntroScreen from "./sections/introScreen";
 import Navbar from "./sections/navbar";
@@ -29,6 +30,8 @@ export default function Home({ locale }: { locale: Locale }) {
         <Tecnologies locale={locale} dict={dict.skills} />
         <Contact locale={locale} dict={dict} profile={content.profile} />
       </main>
+
+      <Footer dict={dict.contact} profile={content.profile} />
     </>
   );
 }
