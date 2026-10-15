@@ -13,15 +13,15 @@ export const experience: Experience[] = [
       { label: "App", url: "https://app.zarmedi.com/login" },
     ],
     achievements: [
-      "Architected the NestJS backend as a modular monolith with hexagonal architecture and DDD: 47 modules, ~272 REST endpoints documented with Swagger, 41 entities and 109 TypeORM migrations on PostgreSQL (Supabase).",
-      "Implemented subdomain-based multi-tenancy, multi-branch support and RBAC with 6 roles and fine-grained permissions per module and action, plus a change audit log.",
-      "Built authentication with JWT and refresh tokens in HttpOnly cookies, OTP access for patients, rate limiting and security headers.",
+      "Architected the NestJS backend as a modular monolith with hexagonal architecture and DDD, with more than 270 REST endpoints documented with Swagger on PostgreSQL (Supabase).",
       "Integrated generative AI (Groq) for ICD-10 diagnosis suggestions, treatments, clinical summaries and demand forecasting.",
-      "Built a WhatsApp bot (Meta Cloud API) that handles appointments 24/7, with a Redis-backed state machine and HMAC-SHA256 webhook verification.",
-      "Implemented asynchronous processing with BullMQ and Redis (16 queues and 12 scheduled jobs).",
-      "Developed digital signing of consent forms with SHA-256 hashing and evidence logging, compliant with Argentine Law 25.506.",
+      "Built the frontend as a Next.js PWA and backed the API with more than 1,500 Jest unit tests.",
+      "Implemented subdomain-based multi-tenancy, multi-branch operation and role-based access control with fine-grained permissions and change auditing.",
+      "Built a WhatsApp bot (Meta Cloud API) that handles appointments 24/7, with verification of external integrations.",
+      "Developed secure authentication for staff and patients, with abuse protection and web security best practices.",
+      "Implemented asynchronous processing and scheduled jobs with BullMQ and Redis.",
+      "Developed digital signing of consent forms with evidence logging, compliant with Argentine Law 25.506.",
       "Integrated telehealth (Daily.co + Socket.IO), Google Calendar, MercadoPago, Stripe, Resend and PDF prescriptions with verification QR codes.",
-      "Built the frontend as a Next.js 14 PWA (67 pages) and backed the API with more than 1,500 Jest unit tests.",
     ],
     tags: [
       "NestJS",
@@ -54,8 +54,8 @@ export const experience: Experience[] = [
     role: "Backend Architect & Developer (Freelance) — team of 3 developers",
     period: "May 2026 – Present",
     achievements: [
-      "Designed the layered architecture of the NestJS backend for a credit sales and collections platform, and built 25 of its 26 API modules (~146 of 161 endpoints) on PostgreSQL and TypeORM.",
-      "Implemented JWT authentication with Passport, multi-company operation with per-company data isolation and access control across 5 roles, along with the modules for collection routes, daily closings, settlements, cash management and PDF and Excel reports.",
+      "Designed the layered architecture of the NestJS backend for a credit sales and collections platform, and built most of its modules on PostgreSQL and TypeORM.",
+      "Implemented secure authentication, multi-company operation with per-company data isolation and role-based access control, along with the modules for collection routes, daily closings, settlements, cash management and PDF and Excel reports.",
       "Set up the pnpm monorepo, Docker containers and the deployment of the backend, frontend and database on Render.",
     ],
     tags: [
@@ -99,7 +99,7 @@ export const experience: Experience[] = [
     role: "Full Stack Developer · Part-time internship",
     period: "Mar 2026 – Jun 2026",
     achievements: [
-      "Built a Python validator for radio and TV news segments (41 radio and 17 TV outlets) that decides whether to publish them using a weighted score.",
+      "Built a Python automated validator for news content with a scoring system that decides whether to publish it.",
       "Integrated a local LLM (Ollama, Llama 3.2) to evaluate and correct headlines, with a rule-based fallback.",
       "Designed a resilient pipeline on Google Cloud Storage and AWS S3 with retries and idempotency, deployed as a Dockerized AWS Lambda and covered by 124 pytest tests.",
       "Refactored PHP code and redesigned the interfaces of the news management platform.",
@@ -122,9 +122,9 @@ export const experience: Experience[] = [
     role: "Backend Developer · Part-time internship",
     period: "Mar 2026 – Jun 2026",
     achievements: [
-      "As TRAMA's lead backend developer, a management diagnostics SaaS for entrepreneurs, I built 7 of its 10 modules and ~80% of the endpoints, and merged the team's pull requests.",
-      "Implemented full authentication (JWT, refresh tokens, email verification and Google OAuth 2.0) and an admin panel with plan-based access control.",
-      "Developed the TRAMA Index diagnostics engine with AHP weighting across 6 business dimensions, an event-driven achievements system and the deployment on Render.",
+      "As TRAMA's lead backend developer, a management diagnostics SaaS for entrepreneurs, I built most of the backend modules and merged the team's pull requests.",
+      "Implemented full authentication, with email verification and Google sign-in, and an admin panel with plan-based access control.",
+      "Developed the TRAMA Index diagnostics engine with a weighted scoring algorithm, an event-driven achievements system and the deployment on Render.",
     ],
     tags: [
       "NestJS",
@@ -143,7 +143,7 @@ export const experience: Experience[] = [
     period: "May 2023 – Dec 2025",
     achievements: [
       "Designed and built microservices and REST APIs with NestJS and TypeScript following Clean Architecture.",
-      "Implemented authentication and authorization with JWT, custom guards and credential encryption.",
+      "Implemented secure authentication and authorization, with access control and credential protection.",
       "Optimized queries and transactions in SQL Server and MySQL, cutting response times by up to 30%.",
     ],
     tags: ["NestJS", "TypeScript", "SQL Server", "MySQL", "JWT", "GitFlow"],

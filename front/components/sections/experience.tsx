@@ -1,8 +1,11 @@
 import "./../../styles/experience.css";
-import { FiExternalLink } from "react-icons/fi";
+import { FiChevronDown, FiExternalLink } from "react-icons/fi";
 import type { Dictionary } from "../../i18n";
 import type { Experience as ExperienceItem } from "../../types/portfolio";
 import SectionHead from "../ui/sectionHead";
+
+// Logros visibles por experiencia; el resto va en "Ver más"
+const VISIBLE_ACHIEVEMENTS = 3;
 
 export default function Experience({
   dict,
@@ -52,10 +55,24 @@ export default function Experience({
               )}
 
               <ul className="experience-achievements">
-                {job.achievements.map((achievement) => (
+                {job.achievements.slice(0, VISIBLE_ACHIEVEMENTS).map((achievement) => (
                   <li key={achievement}>{achievement}</li>
                 ))}
               </ul>
+
+              {job.achievements.length > VISIBLE_ACHIEVEMENTS && (
+                <details className="disclosure experience-more">
+                  <summary>
+                    {dict.showMore} ({job.achievements.length - VISIBLE_ACHIEVEMENTS})
+                    <FiChevronDown className="icon" aria-hidden="true" />
+                  </summary>
+                  <ul className="experience-achievements">
+                    {job.achievements.slice(VISIBLE_ACHIEVEMENTS).map((achievement) => (
+                      <li key={achievement}>{achievement}</li>
+                    ))}
+                  </ul>
+                </details>
+              )}
 
               <ul className="tag-list">
                 {job.tags.map((tag) => (

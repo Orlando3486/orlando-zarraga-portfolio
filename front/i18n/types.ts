@@ -18,23 +18,28 @@ export type Dictionary = {
     language: string;
   };
   hero: {
-    greeting: string;
+    available: string;
     viewProjects: string;
     contact: string;
     photoAlt: string;
   };
   cv: { button: string; fullstack: string; backend: string };
   about: SectionHeadText & { languages: string; education: string; location: string };
-  experience: SectionHeadText;
+  experience: SectionHeadText & { showMore: string };
   projects: SectionHeadText & {
+    viewCase: string;
+    problem: string;
+    solution: string;
+    result: string;
     featured: string;
     previousImage: string;
     nextImage: string;
     viewImage: string;
   };
-  skills: SectionHeadText & { categories: Record<SkillCategory, string> };
+  skills: SectionHeadText & { core: string; categories: Record<SkillCategory, string> };
   contact: SectionHeadText & {
     email: string;
+    infinity: { title: string; text: string; website: string; schedule: string };
     backToTop: string;
     role: string;
     rights: string;

@@ -66,6 +66,10 @@
   color: var(--accent);
 }
 
+.experience-more .experience-achievements {
+  margin-top: 0;
+}
+
 .experience-card .tag-list {
   margin-top: var(--sp-3);
 }

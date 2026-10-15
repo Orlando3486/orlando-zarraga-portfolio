@@ -12,8 +12,19 @@
   gap: var(--sp-8);
 }
 
+.hero-status {
+  margin-bottom: var(--sp-3);
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--success);
+  box-shadow: 0 0 0 4px rgba(74, 222, 128, 0.2);
+}
+
 .hero h1 {
-  margin-top: var(--sp-1);
   font-size: var(--fs-h1);
   font-weight: 700;
   line-height: var(--lh-h1);
@@ -21,7 +32,6 @@
 }
 
 .hero-role {
-  min-height: 1.5em;
   margin-top: var(--sp-1);
   color: var(--accent);
   font-family: var(--font-heading);

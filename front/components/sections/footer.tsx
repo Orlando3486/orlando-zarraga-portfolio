@@ -1,6 +1,6 @@
-import { FiArrowUp } from "react-icons/fi";
 import type { Dictionary } from "../../i18n";
 import type { Profile } from "../../types/portfolio";
+import ScrollTop from "../ui/scrollTop";
 
 export default function Footer({
   dict,
@@ -16,9 +16,7 @@ export default function Footer({
           © {new Date().getFullYear()} {profile.name} · {dict.role}. {dict.rights}
         </p>
       </div>
-      <a href="#hero" className="icon-btn scroll-top" aria-label={dict.backToTop}>
-        <FiArrowUp className="icon" aria-hidden="true" />
-      </a>
+      <ScrollTop label={dict.backToTop} />
     </footer>
   );
 }

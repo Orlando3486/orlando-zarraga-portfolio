@@ -33,6 +33,37 @@
   color: var(--text-2);
 }
 
+.project-case {
+  align-self: stretch;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.case-study {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-2);
+  padding-bottom: var(--sp-2);
+}
+
+.case-study > div {
+  padding-left: var(--sp-2);
+  border-left: 2px solid var(--line-strong);
+}
+
+.case-study dt {
+  color: var(--accent);
+  font-size: var(--fs-eyebrow);
+  font-weight: 600;
+  letter-spacing: var(--ls-eyebrow);
+  text-transform: uppercase;
+}
+
+.case-study dd {
+  margin-top: 4px;
+  color: var(--text-2);
+}
+
 .project-body .tag-list {
   margin-top: var(--sp-2);
 }

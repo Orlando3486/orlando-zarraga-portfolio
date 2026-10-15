@@ -1,7 +1,6 @@
 import "./../../styles/hero.css";
 
 import Image from "next/image";
-import TypingText from "./typingText";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import type { Dictionary } from "../../i18n";
 import type { Locale } from "../../lib/i18n";
@@ -21,11 +20,12 @@ export default function Hero({
     <section id="hero" className="hero section">
       <div className="container hero-grid">
         <div className="hero-text">
-          <p className="eyebrow">{dict.hero.greeting}</p>
-          <h1>{profile.name}</h1>
-          <p className="hero-role">
-            <TypingText roles={profile.roles} />
+          <p className="badge hero-status">
+            <span className="status-dot" aria-hidden="true" />
+            {dict.hero.available}
           </p>
+          <h1>{profile.name}</h1>
+          <p className="hero-role">{profile.tagline}</p>
           <p className="lead hero-lead">{profile.heroDescription}</p>
 
           <div className="hero-actions">

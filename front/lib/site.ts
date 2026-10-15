@@ -14,3 +14,8 @@ export const cvFiles: Record<Locale, Record<CvVariant, string>> = {
     backend: "/cv/Resume_Orlando_Zarraga_Backend_Developer_EN.pdf",
   },
 };
+
+export const infinitySoftware = {
+  url: "https://infinitysoftware.dev",
+  calendar: "https://calendar.app.google/ZiCUGEZ2YQJtKQqU9",
+};

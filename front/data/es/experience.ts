@@ -13,15 +13,15 @@ export const experience: Experience[] = [
       { label: "App", url: "https://app.zarmedi.com/login" },
     ],
     achievements: [
-      "Arquitecté el backend NestJS como monolito modular con arquitectura hexagonal y DDD: 47 módulos, ~272 endpoints REST documentados con Swagger, 41 entidades y 109 migraciones TypeORM sobre PostgreSQL (Supabase).",
-      "Implementé multi-tenancy por subdominio, multi-sucursal y RBAC con 6 roles y permisos granulares por módulo y acción, más audit log de cambios.",
-      "Desarrollé autenticación con JWT y refresh tokens en cookies HttpOnly, acceso por OTP para pacientes, rate limiting y cabeceras de seguridad.",
+      "Arquitecté el backend NestJS como monolito modular con arquitectura hexagonal y DDD, con más de 270 endpoints REST documentados con Swagger sobre PostgreSQL (Supabase).",
       "Integré IA generativa (Groq) para sugerencias de diagnóstico en CIE-10, tratamientos, resúmenes clínicos y predicción de demanda.",
-      "Construí un bot de WhatsApp (Meta Cloud API) que gestiona turnos 24/7, con máquina de estados en Redis y verificación HMAC-SHA256 de webhooks.",
-      "Implementé procesamiento asíncrono con BullMQ y Redis (16 colas y 12 tareas programadas).",
-      "Desarrollé firma digital de consentimientos con hash SHA-256 y registro de evidencia, conforme a la Ley 25.506.",
+      "Desarrollé el frontend como PWA en Next.js y respaldé el backend con más de 1.500 tests unitarios en Jest.",
+      "Implementé multi-tenancy por subdominio, operación multi-sucursal y control de acceso por roles con permisos granulares y auditoría de cambios.",
+      "Construí un bot de WhatsApp (Meta Cloud API) que gestiona turnos 24/7, con verificación de las integraciones externas.",
+      "Desarrollé autenticación segura para el equipo y los pacientes, con protección contra abusos y buenas prácticas de seguridad web.",
+      "Implementé procesamiento asíncrono y tareas programadas con BullMQ y Redis.",
+      "Desarrollé la firma digital de consentimientos con registro de evidencia, conforme a la Ley 25.506.",
       "Integré teleconsulta (Daily.co + Socket.IO), Google Calendar, MercadoPago, Stripe, Resend y recetas PDF con QR de verificación.",
-      "Desarrollé el frontend como PWA en Next.js 14 (67 páginas) y respaldé el backend con más de 1.500 tests unitarios en Jest.",
     ],
     tags: [
       "NestJS",
@@ -54,8 +54,8 @@ export const experience: Experience[] = [
     role: "Arquitecto y Desarrollador Backend (Freelance) — equipo de 3 desarrolladores",
     period: "May. 2026 – Presente",
     achievements: [
-      "Diseñé la arquitectura en capas del backend NestJS de una plataforma de gestión de ventas a crédito y cobranza, y creé 25 de sus 26 módulos con API (~146 de 161 endpoints) sobre PostgreSQL y TypeORM.",
-      "Implementé autenticación JWT con Passport, operación multi-empresa con aislamiento de datos por sociedad y control de acceso por 5 roles, junto con los módulos de hojas de ruta de cobranza, cierres diarios, liquidaciones, caja y reportes en PDF y Excel.",
+      "Diseñé la arquitectura en capas del backend NestJS de una plataforma de gestión de ventas a crédito y cobranza, y construí la mayor parte de sus módulos sobre PostgreSQL y TypeORM.",
+      "Implementé autenticación segura, operación multi-empresa con aislamiento de datos por sociedad y control de acceso por roles, junto con los módulos de cobranza en ruta, cierres diarios, liquidaciones, caja y reportes en PDF y Excel.",
       "Configuré el monorepo pnpm, los contenedores Docker y el despliegue del backend, el frontend y la base de datos en Render.",
     ],
     tags: [
@@ -99,7 +99,7 @@ export const experience: Experience[] = [
     role: "Desarrollador Full Stack · Prácticas profesionales part time",
     period: "Mar. 2026 – Jun. 2026",
     achievements: [
-      "Desarrollé en Python un validador automático de segmentos de noticias de radio y TV (41 soportes de radio y 17 de TV) que decide su publicación mediante un puntaje ponderado.",
+      "Desarrollé en Python un validador automático de contenido de noticias con un sistema de puntaje que decide su publicación.",
       "Integré un LLM local (Ollama, Llama 3.2) para evaluar y corregir titulares, con respaldo basado en reglas.",
       "Diseñé un flujo resiliente sobre Google Cloud Storage y AWS S3 con reintentos e idempotencia, desplegado como AWS Lambda en Docker, con 124 tests en pytest.",
       "Refactoricé código PHP y rediseñé las interfaces de la plataforma de gestión de noticias.",
@@ -122,9 +122,9 @@ export const experience: Experience[] = [
     role: "Desarrollador Backend · Prácticas profesionales part time",
     period: "Mar. 2026 – Jun. 2026",
     achievements: [
-      "Como desarrollador backend principal de TRAMA, SaaS de diagnóstico de gestión para emprendedores, construí 7 de los 10 módulos y ~80% de los endpoints, e integré los Pull Requests del equipo.",
-      "Implementé autenticación completa (JWT, refresh tokens, verificación de email y Google OAuth 2.0) y un panel de administración con control de acceso por plan.",
-      "Desarrollé el motor de diagnóstico TRAMA Index con ponderación AHP sobre 6 dimensiones de negocio, un sistema de logros basado en eventos y el despliegue en Render.",
+      "Como desarrollador backend principal de TRAMA, SaaS de diagnóstico de gestión para emprendedores, construí la mayor parte de los módulos del backend e integré los Pull Requests del equipo.",
+      "Implementé autenticación completa, con verificación de email e inicio de sesión con Google, y un panel de administración con control de acceso por plan.",
+      "Desarrollé el motor de diagnóstico TRAMA Index con un algoritmo de puntaje ponderado, un sistema de logros basado en eventos y el despliegue en Render.",
     ],
     tags: [
       "NestJS",
@@ -143,7 +143,7 @@ export const experience: Experience[] = [
     period: "May. 2023 – Dic. 2025",
     achievements: [
       "Diseñé y desarrollé microservicios y APIs REST con NestJS y TypeScript bajo Clean Architecture.",
-      "Implementé autenticación y autorización con JWT, guards personalizados y cifrado de credenciales.",
+      "Implementé autenticación y autorización seguras, con control de acceso y protección de credenciales.",
       "Optimicé consultas y transacciones en SQL Server y MySQL, reduciendo tiempos de respuesta hasta un 30%.",
     ],
     tags: ["NestJS", "TypeScript", "SQL Server", "MySQL", "JWT", "GitFlow"],

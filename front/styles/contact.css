@@ -18,6 +18,10 @@
   gap: var(--sp-2);
 }
 
+.contact-text {
+  color: var(--text-2);
+}
+
 .contact-location {
   display: flex;
   align-items: center;
@@ -41,6 +45,10 @@
   bottom: var(--sp-2);
   z-index: 50;
   background: var(--surface-solid);
+}
+
+.scroll-top[hidden] {
+  display: none;
 }
 
 @media (max-width: 768px) {

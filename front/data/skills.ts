@@ -168,3 +168,9 @@ export const skills: Skill[] = [
   // Herramientas
   { name: "Postman", icon: SiPostman, color: "#FF6C37", category: "tools" },
 ];
+
+// Stack principal, destacado arriba de las categorías
+const coreStack = ["NestJS", "TypeScript", "PostgreSQL", "Next.js", "DDD"];
+export const coreSkills: Skill[] = coreStack.flatMap((name) =>
+  skills.filter((skill) => skill.name === name),
+);

@@ -12,7 +12,9 @@ export type Link = {
 export type Profile = {
   name: string;
   title: string;
-  roles: string[];
+  // Subtítulo fijo del hero
+  tagline: string;
+  // Propuesta de valor en una frase
   heroDescription: string;
   summary: string;
   highlights: string[];
@@ -47,9 +49,17 @@ export type GalleryImage = {
   alt: string;
 };
 
+// Caso contado en términos generales: problema → solución → resultado
+export type CaseStudy = {
+  problem: string;
+  solution: string;
+  result: string;
+};
+
 export type Project = {
   title: string;
   description: string;
+  caseStudy?: CaseStudy;
   image?: string;
   // Si existe, reemplaza a image por una galería con miniaturas
   gallery?: GalleryImage[];

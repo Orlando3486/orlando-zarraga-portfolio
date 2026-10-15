@@ -1,7 +1,7 @@
 import Image from "next/image";
 import "./../../styles/projects.css";
 import { FaGithub } from "react-icons/fa";
-import { FiExternalLink, FiStar } from "react-icons/fi";
+import { FiChevronDown, FiExternalLink, FiStar } from "react-icons/fi";
 import type { Dictionary } from "../../i18n";
 import type { Project } from "../../types/portfolio";
 import SectionHead from "../ui/sectionHead";
@@ -71,6 +71,29 @@ export default function Projects({
                 {project.context && <p className="small">{project.context}</p>}
 
                 <p className="project-description">{project.description}</p>
+
+                {project.caseStudy && (
+                  <details className="disclosure project-case">
+                    <summary>
+                      {dict.viewCase}
+                      <FiChevronDown className="icon" aria-hidden="true" />
+                    </summary>
+                    <dl className="case-study">
+                      <div>
+                        <dt>{dict.problem}</dt>
+                        <dd>{project.caseStudy.problem}</dd>
+                      </div>
+                      <div>
+                        <dt>{dict.solution}</dt>
+                        <dd>{project.caseStudy.solution}</dd>
+                      </div>
+                      <div>
+                        <dt>{dict.result}</dt>
+                        <dd>{project.caseStudy.result}</dd>
+                      </div>
+                    </dl>
+                  </details>
+                )}
 
                 {project.tags && (
                   <ul className="tag-list">
