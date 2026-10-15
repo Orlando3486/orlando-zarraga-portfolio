@@ -59,7 +59,7 @@ main {
 
 @media (max-width: 768px) {
   .menu-icon {
-    display: block;
+    display: flex;
   }
 
   .navbar {
@@ -83,4 +83,52 @@ main {
   .nav-links.active {
     transform: translateX(0);
   }
+}
+
+/* Selector de idioma y botón de menú */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  order: 3;
+}
+
+.lang-switch {
+  display: flex;
+  gap: 4px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lang-switch a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 8px;
+  color: #94a3b8;
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.lang-switch a:hover {
+  color: #ffffff;
+}
+
+.lang-switch a[aria-current="true"] {
+  color: #38bdf8;
+  background: rgba(56, 189, 248, 0.12);
+}
+
+.menu-icon {
+  background: none;
+  border: 0;
+  color: inherit;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
 }

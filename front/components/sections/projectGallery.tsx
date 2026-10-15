@@ -3,9 +3,16 @@
 import Image from "next/image";
 import { useState } from "react";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import type { Dictionary } from "../../i18n";
 import type { GalleryImage } from "../../types/portfolio";
 
-export default function ProjectGallery({ images }: { images: GalleryImage[] }) {
+export default function ProjectGallery({
+  images,
+  dict,
+}: {
+  images: GalleryImage[];
+  dict: Dictionary["projects"];
+}) {
   const [current, setCurrent] = useState(0);
 
   const goTo = (index: number) =>
@@ -36,14 +43,14 @@ export default function ProjectGallery({ images }: { images: GalleryImage[] }) {
             type="button"
             className="gallery-arrow prev"
             onClick={() => goTo(current - 1)}
-            aria-label="Imagen anterior">
+            aria-label={dict.previousImage}>
             <FiChevronLeft size={22} />
           </button>
           <button
             type="button"
             className="gallery-arrow next"
             onClick={() => goTo(current + 1)}
-            aria-label="Imagen siguiente">
+            aria-label={dict.nextImage}>
             <FiChevronRight size={22} />
           </button>
         </div>
@@ -58,7 +65,7 @@ export default function ProjectGallery({ images }: { images: GalleryImage[] }) {
             type="button"
             className={`gallery-thumb ${index === current ? "is-active" : ""}`}
             onClick={() => goTo(index)}
-            aria-label={`Ver ${image.alt}`}
+            aria-label={`${dict.viewImage} ${image.alt}`}
             aria-pressed={index === current}>
             <Image src={image.src} alt="" width={120} height={64} />
           </button>

@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { profile } from "../data/profile";
+import { profile } from "../data/es/profile";
 import type { Locale } from "./i18n";
 import { ogTagline } from "./seo";
 import { siteUrl } from "./site";

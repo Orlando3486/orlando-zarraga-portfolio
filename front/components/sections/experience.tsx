@@ -1,12 +1,19 @@
 import "./../../styles/experience.css";
 import "./../../styles/tags.css";
 import { FiExternalLink } from "react-icons/fi";
-import { experience } from "../../data/experience";
+import type { Dictionary } from "../../i18n";
+import type { Experience as ExperienceItem } from "../../types/portfolio";
 
-export default function Experience() {
+export default function Experience({
+  dict,
+  experience,
+}: {
+  dict: Dictionary["experience"];
+  experience: ExperienceItem[];
+}) {
   return (
     <section id="experience" className="section-experience">
-      <h2>Experiencia</h2>
+      <h2>{dict.title}</h2>
 
       <ol className="experience-timeline">
         {experience.map((job) => (

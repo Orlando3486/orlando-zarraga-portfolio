@@ -1,4 +1,4 @@
-import type { Profile } from "../types/portfolio";
+import type { Profile } from "../../types/portfolio";
 
 export const profile: Profile = {
   name: "Orlando Zárraga",
@@ -21,8 +21,6 @@ export const profile: Profile = {
     "Domain-Driven Design (DDD), arquitectura hexagonal",
   ],
   languages: "Español (nativo) · Inglés (B1)",
-  seoDescription:
-    "Portafolio de Orlando Zárraga, Full Stack Developer especializado en plataformas SaaS con TypeScript, NestJS, Next.js y PostgreSQL, DDD y arquitectura hexagonal. Desarrollador principal de ZarMedi y arquitecto backend en InfinitySoftware.",
   contact: {
     email: "orlandozarraga31@hotmail.com",
     linkedin: "https://www.linkedin.com/in/orlando-ismael-zarraga-medina",

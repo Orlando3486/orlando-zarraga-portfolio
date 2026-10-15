@@ -4,9 +4,27 @@ import "../../styles/navbar.css";
 import { useEffect, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
-export default function Navbar() {
+import type { Dictionary } from "../../i18n";
+import { localePath, locales, type Locale } from "../../lib/i18n";
+
+export default function Navbar({
+  locale,
+  dict,
+}: {
+  locale: Locale;
+  dict: Dictionary["nav"];
+}) {
   const [menuOpen, setMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
+
+  const links = [
+    { id: "hero", label: dict.home },
+    { id: "about", label: dict.about },
+    { id: "experience", label: dict.experience },
+    { id: "projects", label: dict.projects },
+    { id: "tecnologies", label: dict.skills },
+    { id: "contact", label: dict.contact },
+  ];
 
   useEffect(() => {
     const sections = document.querySelectorAll("section");
@@ -37,68 +55,53 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="navbar">
-      {/* <h2 className="logo">MiPortfolio</h2> */}
+    <nav className="navbar" aria-label={dict.label}>
       <Image
         src="/images/logo-orlandoz.png"
-        alt="logo Orlando Zárraga"
+        alt="Logo Orlando Zárraga"
         width={170}
         height={110}
         className="logo"
       />
-      {/* icono hamburguesa */}
-      <div className="menu-icon" onClick={() => setMenuOpen(!menuOpen)}>
-        {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+
+      <div className="navbar-actions">
+        {/* Selector de idioma: enlaces normales, sin redirección automática */}
+        <ul className="lang-switch" aria-label={dict.language}>
+          {locales.map((item) => (
+            <li key={item}>
+              <a
+                href={localePath(item)}
+                hrefLang={item}
+                lang={item}
+                aria-current={item === locale ? "true" : undefined}>
+                {item.toUpperCase()}
+              </a>
+            </li>
+          ))}
+        </ul>
+
+        <button
+          type="button"
+          className="menu-icon"
+          aria-label={menuOpen ? dict.closeMenu : dict.openMenu}
+          aria-expanded={menuOpen}
+          aria-controls="nav-links"
+          onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+        </button>
       </div>
-      <ul className={menuOpen ? "nav-links active" : "nav-links"}>
-        <li>
-          <a
-            href="#hero"
-            onClick={() => setMenuOpen(false)}
-            className={activeSection === "hero" ? "active-link" : ""}>
-            Inicio
-          </a>
-        </li>
-        <li>
-          <a
-            href="#about"
-            onClick={() => setMenuOpen(false)}
-            className={activeSection === "about" ? "active-link" : ""}>
-            Sobre mí
-          </a>
-        </li>
-        <li>
-          <a
-            href="#experience"
-            onClick={() => setMenuOpen(false)}
-            className={activeSection === "experience" ? "active-link" : ""}>
-            Experiencia
-          </a>
-        </li>
-        <li>
-          <a
-            href="#projects"
-            onClick={() => setMenuOpen(false)}
-            className={activeSection === "projects" ? "active-link" : ""}>
-            Proyectos
-          </a>
-        </li>
-        <li>
-          <a
-            href="#tecnologies"
-            onClick={() => setMenuOpen(false)}
-            className={activeSection === "tecnologies" ? "active-link" : ""}>
-            Tecnologías
-          </a>
-        </li>
-        <li>
-          <a
-            href="#contact"
-            onClick={() => setMenuOpen(false)}
-            className={activeSection === "contact" ? "active-link" : ""}>
-            Contacto
-          </a>
-        </li>
+
+      <ul id="nav-links" className={menuOpen ? "nav-links active" : "nav-links"}>
+        {links.map((link) => (
+          <li key={link.id}>
+            <a
+              href={`#${link.id}`}
+              onClick={() => setMenuOpen(false)}
+              className={activeSection === link.id ? "active-link" : ""}>
+              {link.label}
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
   );

@@ -1,0 +1,58 @@
+import type { Dictionary } from "./types";
+
+export const en: Dictionary = {
+  intro: { subtitle: "Full Stack Developer" },
+  nav: {
+    label: "Main navigation",
+    home: "Home",
+    about: "About",
+    experience: "Experience",
+    projects: "Projects",
+    skills: "Tech stack",
+    contact: "Contact",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+    language: "Language",
+  },
+  hero: {
+    greeting: "Hi, I'm",
+    viewProjects: "View projects",
+    contact: "Get in touch",
+    photoAlt: "Illustration of Orlando Zárraga",
+  },
+  cv: { button: "Download CV", fullstack: "Full Stack", backend: "Backend" },
+  about: { title: "About me", languages: "Languages", education: "Education" },
+  experience: { title: "Experience" },
+  projects: {
+    title: "Projects",
+    featured: "Featured project",
+    previousImage: "Previous image",
+    nextImage: "Next image",
+    viewImage: "View",
+    repository: "Repository for",
+    demo: "Demo of",
+  },
+  skills: {
+    title: "Tech stack and tools",
+    categories: {
+      languages: "Languages",
+      backend: "Backend",
+      architecture: "Architecture",
+      security: "Security",
+      frontend: "Frontend",
+      databases: "Databases",
+      cloud: "Cloud & DevOps",
+      testing: "Testing",
+      ai: "AI",
+      integrations: "Integrations",
+      tools: "Tools",
+    },
+  },
+  contact: {
+    title: "Contact",
+    subtitle: "Shall we work together?",
+    backToTop: "Back to top",
+    role: "Full Stack Developer",
+    rights: "All rights reserved.",
+  },
+};

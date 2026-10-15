@@ -5,21 +5,31 @@ import "./../../styles/hero.css";
 import Image from "next/image";
 import TypingText from "./typingText";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { profile } from "../../data/profile";
+import type { Dictionary } from "../../i18n";
+import type { Locale } from "../../lib/i18n";
+import type { Profile } from "../../types/portfolio";
 import CvMenu from "../ui/cvMenu";
 
-export default function Hero() {
+export default function Hero({
+  locale,
+  dict,
+  profile,
+}: {
+  locale: Locale;
+  dict: Dictionary;
+  profile: Profile;
+}) {
   return (
     <section className="hero">
       <section id="hero" className="hero">
         <div className="hero-wrapper">
           <div className="hero-text">
-            <p className="hero-intro">Hola, soy</p>
+            <p className="hero-intro">{dict.hero.greeting}</p>
 
             <h1 className="hero-title">{profile.name}</h1>
 
             <h2 className="hero-role">
-              <TypingText />
+              <TypingText roles={profile.roles} />
             </h2>
 
             <p className="hero-description">
@@ -28,16 +38,13 @@ export default function Hero() {
 
             <div className="hero-buttons">
               <a href="#projects" className="btn-primary">
-                Ver proyectos
+                {dict.hero.viewProjects}
               </a>
 
-              <CvMenu
-                locale="es"
-                labels={{ button: "Descargar CV", fullstack: "Full Stack", backend: "Backend" }}
-              />
+              <CvMenu locale={locale} labels={dict.cv} />
 
               <a href="#contact" className="btn-secondary">
-                Contactarme
+                {dict.hero.contact}
               </a>
             </div>
 
@@ -65,7 +72,7 @@ export default function Hero() {
             rel="noopener noreferrer">
             <Image
               src="/images/orlando-profile-cartoon.png"
-              alt={`Foto ${profile.name}`}
+              alt={dict.hero.photoAlt}
               width={260}
               height={350}
               className="profile-img"

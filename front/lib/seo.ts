@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { profile } from "../data/profile";
+import { profile } from "../data/es/profile";
 import { defaultLocale, localePath, locales, type Locale } from "./i18n";
 import { siteUrl } from "./site";
 

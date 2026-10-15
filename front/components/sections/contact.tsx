@@ -3,12 +3,22 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 import "./../../styles/contact.css";
 import { MdEmail } from "react-icons/md";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import { profile } from "../../data/profile";
+import type { Dictionary } from "../../i18n";
+import type { Locale } from "../../lib/i18n";
+import type { Profile } from "../../types/portfolio";
 import CvMenu from "../ui/cvMenu";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 
-export default function Contact() {
+export default function Contact({
+  locale,
+  dict,
+  profile,
+}: {
+  locale: Locale;
+  dict: Dictionary;
+  profile: Profile;
+}) {
   const [idle, setIdle] = useState(true);
   const [bottomOffset, setBottomOffset] = useState(20);
   const idleTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -44,8 +54,8 @@ export default function Contact() {
 
   return (
     <section id="contact" className="section-contact">
-      <h2>Contacto</h2>
-      <h3>¿Trabajamos juntos?</h3>
+      <h2>{dict.contact.title}</h2>
+      <h3>{dict.contact.subtitle}</h3>
       <Image
         src="/images/orlando-image.png"
         alt="Orlando Zarraga icon"
@@ -78,10 +88,7 @@ export default function Contact() {
           </a>
         </li>
       </ul>
-      <CvMenu
-        locale="es"
-        labels={{ button: "Descargar CV", fullstack: "Full Stack", backend: "Backend" }}
-      />
+      <CvMenu locale={locale} labels={dict.cv} />
       <p className="contact-location">
         <FaMapMarkerAlt color="#38bdf8" /> {profile.contact.location}
       </p>
@@ -89,12 +96,12 @@ export default function Contact() {
         href="#hero"
         className={`scroll-top ${idle ? "is-idle" : ""}`}
         style={{ bottom: `${bottomOffset}px` }}
-        aria-label="Volver al inicio">
+        aria-label={dict.contact.backToTop}>
         ↑
       </a>
       <p>
-        {profile.name} | Desarrollador Full Stack, <br /> &copy;{" "}
-        {new Date().getFullYear()}. Todos los derechos reservados.
+        {profile.name} | {dict.contact.role}, <br /> &copy;{" "}
+        {new Date().getFullYear()}. {dict.contact.rights}
       </p>
     </section>
   );

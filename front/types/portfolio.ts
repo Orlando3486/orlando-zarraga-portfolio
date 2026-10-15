@@ -1,4 +1,8 @@
 import type { ElementType } from "react";
+import type { Locale } from "../lib/i18n";
+
+// Texto que puede variar por idioma (string si es igual en todos)
+export type LocalizedText = string | Record<Locale, string>;
 
 export type Link = {
   label: string;
@@ -13,7 +17,6 @@ export type Profile = {
   summary: string;
   highlights: string[];
   languages: string;
-  seoDescription: string;
   contact: {
     email: string;
     linkedin: string;
@@ -60,20 +63,20 @@ export type Project = {
 };
 
 export type SkillCategory =
-  | "Lenguajes"
-  | "Backend"
-  | "Arquitectura"
-  | "Seguridad"
-  | "Frontend"
-  | "Bases de datos"
-  | "Cloud y DevOps"
-  | "Testing"
-  | "IA"
-  | "Integraciones"
-  | "Herramientas";
+  | "languages"
+  | "backend"
+  | "architecture"
+  | "security"
+  | "frontend"
+  | "databases"
+  | "cloud"
+  | "testing"
+  | "ai"
+  | "integrations"
+  | "tools";
 
 export type Skill = {
-  name: string;
+  name: LocalizedText;
   icon: ElementType;
   color: string;
   category: SkillCategory;
@@ -84,4 +87,11 @@ export type Education = {
   institution: string;
   detail?: string;
   period: string;
+};
+
+export type PortfolioContent = {
+  profile: Profile;
+  experience: Experience[];
+  projects: Project[];
+  education: Education[];
 };

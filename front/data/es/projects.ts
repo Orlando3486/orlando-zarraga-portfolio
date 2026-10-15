@@ -1,7 +1,7 @@
 // Íconos del proyecto Centro Estético (comentado más abajo); descomentar junto con él
 // import { FaReact, FaNodeJs } from "react-icons/fa";
 // import { SiNextdotjs, SiPostgresql, SiTypescript } from "react-icons/si";
-import type { Project } from "../types/portfolio";
+import type { Project } from "../../types/portfolio";
 
 export const projects: Project[] = [
   {

@@ -1,4 +1,4 @@
-import type { Experience } from "../types/portfolio";
+import type { Experience } from "../../types/portfolio";
 
 // Ordenada de más reciente a más antigua
 export const experience: Experience[] = [

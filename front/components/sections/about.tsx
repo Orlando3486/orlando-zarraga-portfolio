@@ -1,10 +1,8 @@
-"use client";
-
 import "./../../styles/about.css";
 import { Fragment } from "react";
 import { FaGraduationCap, FaMapMarkerAlt } from "react-icons/fa";
-import { profile } from "../../data/profile";
-import { education } from "../../data/education";
+import type { Dictionary } from "../../i18n";
+import type { Education, Profile } from "../../types/portfolio";
 
 // Envuelve en .highlight los fragmentos de profile.highlights dentro del resumen
 function renderSummary(text: string, highlights: string[]) {
@@ -24,22 +22,32 @@ function renderSummary(text: string, highlights: string[]) {
   );
 }
 
-export default function About() {
+export default function About({
+  dict,
+  profile,
+  education,
+}: {
+  dict: Dictionary["about"];
+  profile: Profile;
+  education: Education[];
+}) {
   return (
     <section id="about" className="section-about">
-      <h2>Sobre mí</h2>
+      <h2>{dict.title}</h2>
       <p>{renderSummary(profile.summary, profile.highlights)}</p>
 
       <ul className="about-facts">
         <li>
           <FaMapMarkerAlt color="#38bdf8" /> {profile.contact.location}
         </li>
-        <li>Idiomas: {profile.languages}</li>
+        <li>
+          {dict.languages}: {profile.languages}
+        </li>
       </ul>
 
       <div className="about-education">
         <h3>
-          <FaGraduationCap color="#38bdf8" /> Educación
+          <FaGraduationCap color="#38bdf8" /> {dict.education}
         </h3>
         <ul>
           {education.map((item) => (

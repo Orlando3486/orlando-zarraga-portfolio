@@ -3,13 +3,20 @@ import "./../../styles/projects.css";
 import "./../../styles/tags.css";
 import { FaGithub } from "react-icons/fa";
 import { FiExternalLink } from "react-icons/fi";
-import { projects } from "../../data/projects";
+import type { Dictionary } from "../../i18n";
+import type { Project } from "../../types/portfolio";
 import ProjectGallery from "./projectGallery";
 
-export default function Projects() {
+export default function Projects({
+  dict,
+  projects,
+}: {
+  dict: Dictionary["projects"];
+  projects: Project[];
+}) {
   return (
     <section id="projects" className="projects">
-      <h2 className="projects-title">Proyectos</h2>
+      <h2 className="projects-title">{dict.title}</h2>
       {/* <p className="projects-subtitle">Algunos trabajos recientes</p> */}
 
       <div className="projects-grid">
@@ -18,11 +25,11 @@ export default function Projects() {
             key={project.title}
             className={`project-card ${project.featured ? "featured" : ""}`}>
             {project.featured && (
-              <span className="project-badge">Proyecto destacado</span>
+              <span className="project-badge">{dict.featured}</span>
             )}
 
             {project.gallery ? (
-              <ProjectGallery images={project.gallery} />
+              <ProjectGallery images={project.gallery} dict={dict} />
             ) : (
               <div className="browser-frame">
                 <div className="browser-header">
@@ -84,7 +91,7 @@ export default function Projects() {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`Repositorio de ${project.title}`}>
+                  aria-label={`${dict.repository} ${project.title}`}>
                   <FaGithub size={30} color="#ffffff" />
                 </a>
               )}
@@ -93,7 +100,7 @@ export default function Projects() {
                   href={project.demo}
                   target="_blank"
                   rel="noopener noreferrer"
-                  aria-label={`Demo de ${project.title}`}>
+                  aria-label={`${dict.demo} ${project.title}`}>
                   <FiExternalLink size={30} />
                 </a>
               )}
