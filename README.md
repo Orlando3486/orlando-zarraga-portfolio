@@ -1,74 +1,60 @@
-# Orlando Zarraga - Fullstack Portfolio
+# Orlando Zárraga — Portafolio
 
-Portafolio profesional desarrollado con arquitectura fullstack moderna.
+Portafolio profesional de **Orlando Zárraga**, Full Stack Developer con foco en backend. Reúne experiencia, proyectos, stack tecnológico y datos de contacto, disponible en español e inglés.
 
-## 🚀 Tech Stack
+🔗 **Sitio:** [orlando-zarraga-portfolio.vercel.app](https://orlando-zarraga-portfolio.vercel.app)
 
-Frontend:
-- Next.js (App Router)
+## Características
+
+- Contenido en español (`/`) e inglés (`/en`) con diccionarios tipados, sin dependencias de i18n.
+- Renderizado estático con Next.js App Router: el contenido llega completo en el HTML.
+- SEO por idioma: metadata, Open Graph y Twitter, `hreflang`, JSON-LD (`Person`), `sitemap.xml` y `robots.txt`.
+- Imágenes de vista previa generadas con `next/og`.
+- Descarga de CV (Full Stack o Backend) en el idioma de la página.
+- Diseño responsive, contraste WCAG AA y respeto de `prefers-reduced-motion`.
+
+## Stack
+
+- [Next.js 16](https://nextjs.org/) (App Router) y React 19
 - TypeScript
-- TailwindCSS
-- SSR
+- CSS con tokens de diseño propios
+- react-icons
+- Despliegue en Vercel
 
-Backend:
-- NestJS
-- TypeScript
-- Arquitectura modular
-- REST API
+## Estructura
 
-## 🏗 Arquitectura
+```
+front/
+├── app/          # Rutas, layouts, metadata, imagen OG, sitemap y robots
+├── components/   # Secciones del sitio y componentes de interfaz
+├── data/         # Contenido tipado por idioma (perfil, experiencia, proyectos…)
+├── i18n/         # Textos de interfaz por idioma
+├── lib/          # Configuración del sitio, idiomas y SEO
+├── public/       # Imágenes y CV en PDF
+└── styles/       # Estilos por sección
+```
 
-Monorepo:
+## Correr en local
 
-/front → Aplicación Next.js  
-/back → API backend con NestJS  
+Requisitos: Node.js 20 o superior.
 
-Comunicación vía REST API.
+```bash
+cd front
+npm install
+npm run dev
+```
 
-## ⚙️ Instalación
+La aplicación queda en [http://localhost:3000](http://localhost:3000) (español) y [http://localhost:3000/en](http://localhost:3000/en) (inglés).
 
-### Backend
+Otros comandos:
 
-cd back  
-npm install  
-npm run start:dev  
+```bash
+npm run build   # build de producción
+npm run start   # sirve el build
+npm run lint    # ESLint
+```
 
-Servidor en:
-http://localhost:4000
+## Contacto
 
-### Frontend
-
-cd front  
-npm install  
-npm run dev  
-
-Aplicación en:
-http://localhost:3000
-
-## 🔌 Endpoints
-
-GET /projects  
-GET /projects/featured  
-
-## 🎯 Objetivo
-
-Este proyecto está diseñado como demostración de habilidades en:
-
-- Desarrollo Backend
-- Arquitectura modular
-- SSR
-- Integración frontend-backend
-- Buenas prácticas
-
-## 📌 Próximas mejoras
-
-- Integración con PostgreSQL
-- Prisma ORM
-- Autenticación JWT
-- Dashboard admin
-- Blog técnico dinámico
-- Deploy en producción
-
----
-
-Desarrollado por Orlando Zarraga
+- LinkedIn: [orlando-ismael-zarraga-medina](https://www.linkedin.com/in/orlando-ismael-zarraga-medina)
+- GitHub: [Orlando3486](https://github.com/Orlando3486)

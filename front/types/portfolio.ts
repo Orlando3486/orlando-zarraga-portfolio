@@ -1,4 +1,8 @@
 import type { ElementType } from "react";
+import type { Locale } from "../lib/i18n";
+
+// Texto que puede variar por idioma (string si es igual en todos)
+export type LocalizedText = string | Record<Locale, string>;
 
 export type Link = {
   label: string;
@@ -8,12 +12,13 @@ export type Link = {
 export type Profile = {
   name: string;
   title: string;
-  roles: string[];
+  // Subtítulo fijo del hero
+  tagline: string;
+  // Propuesta de valor en una frase
   heroDescription: string;
   summary: string;
   highlights: string[];
   languages: string;
-  seoDescription: string;
   contact: {
     email: string;
     linkedin: string;
@@ -44,12 +49,22 @@ export type GalleryImage = {
   alt: string;
 };
 
+// Caso contado en términos generales: problema → solución → resultado
+export type CaseStudy = {
+  problem: string;
+  solution: string;
+  result: string;
+};
+
 export type Project = {
   title: string;
   description: string;
+  caseStudy?: CaseStudy;
   image?: string;
   // Si existe, reemplaza a image por una galería con miniaturas
   gallery?: GalleryImage[];
+  // Relación de aspecto de las capturas de la galería (CSS, por ejemplo "1535 / 815")
+  galleryAspect?: string;
   featured?: boolean;
   context?: string;
   technologies?: ProjectTech[];
@@ -60,20 +75,20 @@ export type Project = {
 };
 
 export type SkillCategory =
-  | "Lenguajes"
-  | "Backend"
-  | "Arquitectura"
-  | "Seguridad"
-  | "Frontend"
-  | "Bases de datos"
-  | "Cloud y DevOps"
-  | "Testing"
-  | "IA"
-  | "Integraciones"
-  | "Herramientas";
+  | "languages"
+  | "backend"
+  | "architecture"
+  | "security"
+  | "frontend"
+  | "databases"
+  | "cloud"
+  | "testing"
+  | "ai"
+  | "integrations"
+  | "tools";
 
 export type Skill = {
-  name: string;
+  name: LocalizedText;
   icon: ElementType;
   color: string;
   category: SkillCategory;
@@ -84,4 +99,11 @@ export type Education = {
   institution: string;
   detail?: string;
   period: string;
+};
+
+export type PortfolioContent = {
+  profile: Profile;
+  experience: Experience[];
+  projects: Project[];
+  education: Education[];
 };
