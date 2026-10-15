@@ -63,6 +63,8 @@ export type Project = {
   image?: string;
   // Si existe, reemplaza a image por una galería con miniaturas
   gallery?: GalleryImage[];
+  // Relación de aspecto de las capturas de la galería (CSS, por ejemplo "1535 / 815")
+  galleryAspect?: string;
   featured?: boolean;
   context?: string;
   technologies?: ProjectTech[];

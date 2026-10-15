@@ -5,7 +5,7 @@ export const projects: Project[] = [
     title: "ZarMedi - Medical Practice Management SaaS",
     description:
       "Multi-tenant medical platform in production for practices and clinics in Argentina and LATAM: scheduling, medical records, telehealth, prescriptions, digitally signed consent forms, generative AI and a WhatsApp bot. More than 270 REST endpoints.",
-    image: "/images/zarmedi-inicio.png",
+    image: "/images/zarmedi/zarmedi-01-panel.png",
     caseStudy: {
       problem:
         "Appointments, medical records and patient communication spread across separate, manual tools.",
@@ -14,13 +14,56 @@ export const projects: Project[] = [
       result:
         "Less administrative work, automatic reminders, appointments booked after hours and centralized, secure information.",
     },
+    galleryAspect: "1535 / 815",
     gallery: [
-      { src: "/images/zarmedi-inicio.png", alt: "ZarMedi - Home dashboard" },
-      { src: "/images/projects/zarmedi/estadisticas-zarmedi.png", alt: "ZarMedi - Clinic analytics" },
-      { src: "/images/projects/zarmedi/teleconsulta-zarmedi.png", alt: "ZarMedi - Telehealth" },
-      { src: "/images/projects/zarmedi/inventario-zarmedi.png", alt: "ZarMedi - Inventory" },
-      { src: "/images/projects/zarmedi/configuraciones-zarmedi.png", alt: "ZarMedi - Clinic settings" },
-      { src: "/images/zarmedi-login.png", alt: "ZarMedi - Sign in" },
+      {
+        src: "/images/zarmedi/zarmedi-01-panel.png",
+        alt: "ZarMedi home dashboard with monthly metrics, today's schedule and quick actions",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-02-agenda.png",
+        alt: "ZarMedi weekly schedule with color-coded appointment statuses and calendar or list view",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-03-pacientes.png",
+        alt: "ZarMedi patient management with search, filters and patient import",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-04-teleconsulta.png",
+        alt: "ZarMedi telehealth module for starting video calls with patients",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-05-recetas.png",
+        alt: "ZarMedi digital prescriptions with draft, signed and sent counters",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-06-analisis.png",
+        alt: "ZarMedi analytics dashboard with appointments, revenue, cancellations and no-show rate",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-07-facturacion.png",
+        alt: "ZarMedi billing with amounts invoiced, collected and pending for the month",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-08-inventario.png",
+        alt: "ZarMedi inventory with active products, stock alerts and inventory value",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-09-recordatorios.png",
+        alt: "ZarMedi personal reminders, configurable by channel",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-10-configuracion.png",
+        alt: "ZarMedi general settings for the healthcare center, organized in tabs",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-11-registro.png",
+        alt: "ZarMedi sign-up with a choice between healthcare center and independent professional",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-12-login.png",
+        alt: "ZarMedi sign-in screen",
+      },
     ],
     featured: true,
     context: "Lead Developer — 2026 – Present",
@@ -54,6 +97,7 @@ export const projects: Project[] = [
         "Full control over the lifecycle of every sale, organized collections and up-to-date reports for management.",
     },
     // App privada con login: sin enlace público
+    galleryAspect: "1910 / 862",
     gallery: [
       { src: "/images/canarias002.png", alt: "Canarias - Sales rep home dashboard" },
       { src: "/images/canarias004.png", alt: "Canarias - My sales" },

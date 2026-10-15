@@ -44,9 +44,14 @@ export const es: Dictionary = {
     result: "Resultado",
     lead: "Plataformas que diseñé y construí, con el problema que resuelven, la solución y el resultado.",
     featured: "Proyecto destacado",
-    previousImage: "Imagen anterior",
-    nextImage: "Imagen siguiente",
-    viewImage: "Ver",
+    carousel: {
+      roleDescription: "carrusel",
+      screenshotsOf: "Capturas de",
+      previous: "Captura anterior",
+      next: "Captura siguiente",
+      open: "Ampliar",
+      close: "Cerrar",
+    },
   },
   skills: {
     eyebrow: "Tecnologías",

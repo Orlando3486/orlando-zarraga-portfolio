@@ -8,7 +8,7 @@ export const projects: Project[] = [
     title: "ZarMedi - SaaS de Gestión Médica",
     description:
       "Plataforma médica multi-tenant en producción para consultorios y clínicas de Argentina y LATAM: agenda, historia clínica, teleconsulta, recetas, consentimientos con firma digital, IA generativa y bot de WhatsApp. Más de 270 endpoints REST.",
-    image: "/images/zarmedi-inicio.png",
+    image: "/images/zarmedi/zarmedi-01-panel.png",
     caseStudy: {
       problem:
         "Turnos, historias clínicas y comunicación con pacientes en herramientas separadas y manuales.",
@@ -17,13 +17,56 @@ export const projects: Project[] = [
       result:
         "Menos tareas administrativas, recordatorios automáticos, turnos atendidos fuera de horario e información centralizada y segura.",
     },
+    galleryAspect: "1535 / 815",
     gallery: [
-      { src: "/images/zarmedi-inicio.png", alt: "ZarMedi - Panel de inicio" },
-      { src: "/images/projects/zarmedi/estadisticas-zarmedi.png", alt: "ZarMedi - Estadísticas de la clínica" },
-      { src: "/images/projects/zarmedi/teleconsulta-zarmedi.png", alt: "ZarMedi - Teleconsulta" },
-      { src: "/images/projects/zarmedi/inventario-zarmedi.png", alt: "ZarMedi - Inventario" },
-      { src: "/images/projects/zarmedi/configuraciones-zarmedi.png", alt: "ZarMedi - Configuración de la clínica" },
-      { src: "/images/zarmedi-login.png", alt: "ZarMedi - Inicio de sesión" },
+      {
+        src: "/images/zarmedi/zarmedi-01-panel.png",
+        alt: "Panel de inicio de ZarMedi con indicadores del mes, agenda del día y accesos rápidos",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-02-agenda.png",
+        alt: "Agenda semanal de ZarMedi con estados de cita por color y vista de calendario o lista",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-03-pacientes.png",
+        alt: "Gestión de pacientes en ZarMedi con búsqueda, filtros e importación de pacientes",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-04-teleconsulta.png",
+        alt: "Módulo de teleconsulta de ZarMedi para iniciar videollamadas con pacientes",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-05-recetas.png",
+        alt: "Recetas digitales en ZarMedi con contadores de borradores, firmadas y enviadas",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-06-analisis.png",
+        alt: "Panel de análisis de ZarMedi con citas, ingresos, cancelaciones y tasa de ausentismo",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-07-facturacion.png",
+        alt: "Facturación en ZarMedi con montos facturados, cobrados y pendientes del mes",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-08-inventario.png",
+        alt: "Inventario de ZarMedi con productos activos, alertas de stock y valor del inventario",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-09-recordatorios.png",
+        alt: "Recordatorios personales de ZarMedi configurables por canal",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-10-configuracion.png",
+        alt: "Configuración general del centro de salud en ZarMedi, con pestañas por área",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-11-registro.png",
+        alt: "Registro en ZarMedi con elección entre centro de salud y profesional independiente",
+      },
+      {
+        src: "/images/zarmedi/zarmedi-12-login.png",
+        alt: "Pantalla de inicio de sesión de ZarMedi",
+      },
     ],
     featured: true,
     context: "Desarrollador Principal — 2026 – Presente",
@@ -57,6 +100,7 @@ export const projects: Project[] = [
         "Control del ciclo completo de cada venta, cobranza organizada y reportes al día para la gestión.",
     },
     // App privada con login: sin enlace público
+    galleryAspect: "1910 / 862",
     gallery: [
       { src: "/images/canarias002.png", alt: "Canarias - Panel inicial del vendedor" },
       { src: "/images/canarias004.png", alt: "Canarias - Mis ventas" },

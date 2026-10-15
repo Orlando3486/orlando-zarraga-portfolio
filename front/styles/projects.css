@@ -5,12 +5,9 @@
   align-items: start;
 }
 
-/* El destacado ocupa todo el ancho, con imagen y texto en columnas */
+/* El destacado ocupa todo el ancho: carrusel arriba y texto debajo */
 .project-card.is-featured {
   grid-column: 1 / -1;
-  display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
-  gap: var(--sp-4);
 }
 
 .project-body {
@@ -20,8 +17,13 @@
   gap: var(--sp-1);
 }
 
-.project-card:not(.is-featured) .project-body {
+.project-body {
   margin-top: var(--sp-3);
+}
+
+.project-card.is-featured .project-description,
+.project-card.is-featured .project-case {
+  max-width: var(--measure);
 }
 
 .project-body .badge {
@@ -130,95 +132,8 @@
   font-weight: 700;
 }
 
-/* Galería de capturas */
-.gallery-viewport {
-  position: relative;
-  aspect-ratio: 1918 / 1015;
-  overflow: hidden;
-}
-
-.gallery-image {
-  object-fit: cover;
-  object-position: top;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.gallery-image.is-active {
-  opacity: 1;
-}
-
-.gallery-arrow {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(2, 6, 23, 0.85);
-}
-
-.gallery-arrow.prev {
-  left: var(--sp-1);
-}
-
-.gallery-arrow.next {
-  right: var(--sp-1);
-}
-
-.gallery-caption {
-  margin: var(--sp-1) 0;
-  text-align: center;
-}
-
-.gallery-thumbs {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--sp-1);
-}
-
-.gallery-thumb {
-  padding: 0;
-  overflow: hidden;
-  border: 2px solid transparent;
-  border-radius: 6px;
-  background: none;
-  line-height: 0;
-  opacity: 0.6;
-  cursor: pointer;
-  transition:
-    opacity 0.2s,
-    border-color 0.2s;
-}
-
-.gallery-thumb img {
-  width: 72px;
-  height: 40px;
-  object-fit: cover;
-  object-position: top;
-}
-
-.gallery-thumb:hover {
-  opacity: 0.9;
-}
-
-.gallery-thumb.is-active {
-  border-color: var(--accent);
-  opacity: 1;
-}
-
 @media (max-width: 900px) {
-  .projects-grid,
-  .project-card.is-featured {
+  .projects-grid {
     grid-template-columns: 1fr;
-  }
-
-  .project-card.is-featured {
-    gap: var(--sp-3);
-  }
-}
-
-@media (max-width: 768px) {
-  .gallery-thumb img {
-    width: 56px;
-    height: 32px;
   }
 }

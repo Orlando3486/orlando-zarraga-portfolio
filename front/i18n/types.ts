@@ -32,9 +32,15 @@ export type Dictionary = {
     solution: string;
     result: string;
     featured: string;
-    previousImage: string;
-    nextImage: string;
-    viewImage: string;
+    // Carrusel de capturas y vista ampliada
+    carousel: {
+      roleDescription: string;
+      screenshotsOf: string;
+      previous: string;
+      next: string;
+      open: string;
+      close: string;
+    };
   };
   skills: SectionHeadText & { core: string; categories: Record<SkillCategory, string> };
   contact: SectionHeadText & {

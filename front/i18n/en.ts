@@ -44,9 +44,14 @@ export const en: Dictionary = {
     result: "Outcome",
     lead: "Platforms I designed and built, with the problem they solve, the solution and the outcome.",
     featured: "Featured project",
-    previousImage: "Previous image",
-    nextImage: "Next image",
-    viewImage: "View",
+    carousel: {
+      roleDescription: "carousel",
+      screenshotsOf: "Screenshots of",
+      previous: "Previous screenshot",
+      next: "Next screenshot",
+      open: "Enlarge",
+      close: "Close",
+    },
   },
   skills: {
     eyebrow: "Tech stack",

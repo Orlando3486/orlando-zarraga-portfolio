@@ -5,7 +5,7 @@ import { FiChevronDown, FiExternalLink, FiStar } from "react-icons/fi";
 import type { Dictionary } from "../../i18n";
 import type { Project } from "../../types/portfolio";
 import SectionHead from "../ui/sectionHead";
-import ProjectGallery from "./projectGallery";
+import ProjectCarousel from "../ui/projectCarousel";
 
 function BrowserFrame({ children }: { children: React.ReactNode }) {
   return (
@@ -38,7 +38,12 @@ export default function Projects({
               key={project.title}
               className={`card project-card ${project.featured ? "is-featured" : ""}`}>
               {project.gallery ? (
-                <ProjectGallery images={project.gallery} dict={dict} />
+                <ProjectCarousel
+                  images={project.gallery}
+                  label={`${dict.carousel.screenshotsOf} ${project.title}`}
+                  labels={dict.carousel}
+                  aspectRatio={project.galleryAspect}
+                />
               ) : (
                 <BrowserFrame>
                   {project.image ? (
