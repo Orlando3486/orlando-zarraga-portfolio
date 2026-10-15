@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
-import { profile } from "../data/profile";
+import { buildMetadata, personJsonLd } from "../lib/seo";
 import { introScript } from "../lib/intro";
 
 const inter = Inter({
@@ -15,10 +15,7 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-export const metadata: Metadata = {
-  title: `${profile.name} | Portafolio`,
-  description: profile.seoDescription,
-};
+export const metadata: Metadata = buildMetadata("es");
 
 export default function RootLayout({
   children,
@@ -31,6 +28,10 @@ export default function RootLayout({
         <script dangerouslySetInnerHTML={{ __html: introScript }} />
       </head>
       <body className={`${inter.variable} ${poppins.variable} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd("es")) }}
+        />
         {children}
       </body>
     </html>
