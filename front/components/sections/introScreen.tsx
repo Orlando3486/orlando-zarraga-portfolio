@@ -1,39 +1,41 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { useEffect } from "react";
+import { INTRO_STORAGE_KEY } from "../../lib/intro";
 
-export default function IntroScreen({ onFinish }: { onFinish: () => void }) {
+function closeIntro() {
+  delete document.documentElement.dataset.intro;
+}
+
+// Capa por encima del contenido, que ya está en el HTML desde el inicio.
+// Se oculta sola con la animación CSS, con un clic o con Escape.
+export default function IntroScreen({ subtitle }: { subtitle: string }) {
   useEffect(() => {
-    const timer = setTimeout(() => {
-      onFinish();
-    }, 3200);
+    if (!document.documentElement.dataset.intro) return;
 
-    return () => clearTimeout(timer);
-  }, [onFinish]);
+    try {
+      sessionStorage.setItem(INTRO_STORAGE_KEY, "1");
+    } catch {
+      // sessionStorage bloqueado: la intro se vuelve a mostrar en la próxima visita
+    }
+
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") closeIntro();
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
 
   return (
-    <motion.div
+    <div
       className="intro-screen"
-      initial={{ opacity: 1 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0, filter: "blur(10px)", scale: 1.05 }}
-      transition={{ duration: 0.8 }}>
-      <motion.h1
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-        className="intro-title">
-        {"<OrlandoZarraga />"}
-      </motion.h1>
-
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1 }}
-        className="intro-sub">
-        Full Stack Developer
-      </motion.p>
-    </motion.div>
+      aria-hidden="true"
+      onClick={closeIntro}
+      onAnimationEnd={(event) => {
+        if (event.target === event.currentTarget) closeIntro();
+      }}>
+      <p className="intro-title">{"<OrlandoZarraga />"}</p>
+      <p className="intro-sub">{subtitle}</p>
+    </div>
   );
 }

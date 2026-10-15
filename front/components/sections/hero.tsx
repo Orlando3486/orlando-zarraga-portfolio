@@ -5,16 +5,11 @@ import "./../../styles/hero.css";
 import Image from "next/image";
 import TypingText from "./typingText";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { motion } from "framer-motion";
 import { profile } from "../../data/profile";
 
 export default function Hero() {
   return (
-    <motion.section
-      className="hero"
-      initial={{ opacity: 0, y: 40 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 1 }}>
+    <section className="hero">
       <section id="hero" className="hero">
         <div className="hero-wrapper">
           <div className="hero-text">
@@ -72,6 +67,6 @@ export default function Hero() {
           </a>
         </div>
       </section>
-    </motion.section>
+    </section>
   );
 }
